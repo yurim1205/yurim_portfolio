@@ -1,10 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    // "여기에 원하는 파일 경로 추가하기"
+    "./src/App.jsx",
+    "./src/components/common/header.jsx"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        main: "#294122", 
+      },
+    },
   },
   plugins: [],
 }
