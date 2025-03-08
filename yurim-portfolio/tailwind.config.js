@@ -9,6 +9,10 @@ export default {
       colors: {
         main: "#294122", 
       },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        aclonica: ['Aclonica', 'sans-serif'], 
+      }
     },
   },
   plugins: [],
