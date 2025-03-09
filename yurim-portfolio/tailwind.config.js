@@ -2,7 +2,8 @@
 export default {
   content: [
     "./src/App.jsx",
-    "./src/components/common/header.jsx"
+    "./src/components/common/header.jsx",
+    "./src/components/about/about.jsx"
   ],
   theme: {
     extend: {
@@ -12,6 +13,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         aclonica: ['Aclonica', 'sans-serif'], 
+        abhaya: ['Abhaya Libre', 'serif'],
       }
     },
   },

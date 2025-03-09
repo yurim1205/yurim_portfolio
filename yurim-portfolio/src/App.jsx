@@ -1,6 +1,15 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './components/common/header';
+import About from './components/about/about';
+
+// 모든 section태그에 대한 관찰 로직이 있고, 
+// activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
+
+// [App.jsx]
+// IntersectionObserver로 각 섹션을 감지하고 activeSection 상태를 업데이트.
+// activeSection 상태를 Header에 props로 전달.
+// 각 섹션 컴포넌트(About.jsx, Stack.jsx, Project.jsx 등)를 렌더링.
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -44,23 +53,23 @@ const App = () => {
             PORT<br />FOLIO
           </h1>
         </section>
+
         <section
           id="about"
-          className="h-screen bg-gray-200 flex items-center justify-center opacity-0"
-        >
-          <h1 className="text-2xl font-bold">About Section</h1>
+          className="h-screen bg-[#FFEDD2] flex items-center justify-center">
+          <About />
         </section>
+
         <section
           id="stack"
-          className="h-screen bg-gray-300 flex items-center justify-center opacity-0"
-        >
-          <h1 className="text-2xl font-bold">Stack Section</h1>
+          className="h-scree flex items-center justify-center">
+          <h1 className="text-2xl">Stack Section</h1>
         </section>
+
         <section
           id="project"
-          className="h-screen bg-gray-400 flex items-center justify-center opacity-0"
-        >
-          <h1 className="text-2xl font-bold">Project Section</h1>
+          className="h-screen flex items-center justify-center">
+          <h1 className="text-2xl">Project Section</h1>
         </section>
       </main>
     </>
