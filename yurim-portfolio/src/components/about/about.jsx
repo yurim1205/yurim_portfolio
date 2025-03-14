@@ -28,40 +28,35 @@ const About = () => {
 
   return (
     <section
-      id="about"
-      className="h-screen bg-[#FFEDD2] flex flex-col items-center text-gray-800 px-4"
-    >
-      <p className="text-[64px] mb-8 font-thin font-abhaya underline decoration-[2px] pt-32">
+    id="about"
+    className="w-full max-w-6xl mx-auto bg-[#FFEDD2] flex flex-col items-center justify-center px-4"
+  >
+    <div className="max-w-6xl w-full px-4">
+      <p className="text-[64px] sm:text-[48px] text-center mb-8 font-thin font-abhaya underline decoration-[2px]">
         ABOUT ME
       </p>
 
-      <p className="text-3xl text-center max-w-3xl leading-8 pt-4 text-[#294122] font-sans">
+      <p className="text-3xl sm:text-2xl text-center max-w-3xl mx-auto leading-8 text-[#294122] font-sans">
         안녕하세요! 경청을 좋아하는 이유림입니다.
       </p>
-
-      <p className="text-3xl text-center max-w-4xl leading-snug pt-8 text-[#294122] font-sans">
-        <span className="font-bold text-3xl">주도적</span>으로 새로운 기술을
-        학습하는 것을 좋아하며, <br />
-        <span className="font-bold text-3xl">UX를 우선시하며 개발하는</span> 프론트엔드 개발자로 
-        <span className="font-bold text-3xl"> 성장</span>하고 싶습니다.
+      
+      <p className="text-3xl sm:text-2xl text-center max-w-4xl mx-auto leading-snug mt-4 text-[#294122] font-sans">
+        <span className="font-bold">주도적</span>으로 새로운 기술을 학습하는 것을 좋아하며, <br />
+        <span className="font-bold">UX를 우선시하며 개발하는</span> 프론트엔드 개발자로
+        <span className="font-bold"> 성장</span>하고 싶습니다.
       </p>
 
-      <div className="flex justify-center gap-36 pt-36">
-        {infoItems.map((item, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <img
-              src={item.icon}
-              alt={`${item.title} 아이콘`}
-              className={`${item.size} text-[#294122]`}
-            />
-            <p className="text-2xl mt-4 font-bold text-[#294122] font-sans">
-              {item.title}
-            </p>
-            <p className="text-xl mt-4 text-[#294122] font-sans">{item.body}</p>
-          </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pt-36">
+        {infoItems.map((item) => (
+         <div className="flex flex-col items-center">
+         <img src={item.icon} alt={`${item.title} 아이콘`} className="h-20 w-20" />
+         <p className="text-2xl mt-4 font-bold text-[#294122]">{item.title}</p>
+         <p className="text-xl mt-4 text-[#294122] text-center">{item.body}</p>
+       </div>       
         ))}
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 
