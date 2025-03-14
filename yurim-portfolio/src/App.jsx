@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './components/common/header';
 import About from './components/about/about';
+import Stack from './components/stack/stack';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
@@ -55,15 +56,13 @@ const App = () => {
         </section>
 
         <section
-          id="about"
-          className="h-screen bg-[#FFEDD2] flex items-center justify-center">
+          id="about">
           <About />
         </section>
 
         <section
-          id="stack"
-          className="h-scree flex items-center justify-center">
-          <h1 className="text-2xl">Stack Section</h1>
+          id="stack">
+          <Stack />
         </section>
 
         <section
