@@ -3,7 +3,8 @@ export default {
   content: [
     "./src/App.jsx",
     "./src/components/common/header.jsx",
-    "./src/components/about/about.jsx"
+    "./src/components/about/about.jsx",
+    "./src/components/stack/stack.jsx"
   ],
   theme: {
     extend: {
