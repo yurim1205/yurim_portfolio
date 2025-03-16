@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './components/common/header';
 import About from './components/about/about';
-import Stack from './components/stack/stack';
+import Stack from './components/stack/stackList';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
@@ -17,9 +17,9 @@ const App = () => {
 
   useEffect(() => {
     const sections = document.querySelectorAll('section');
-    
+
     const observerOptions = {
-      root: null, 
+      root: null,
       threshold: 0.1, // 10% 보이면 트리거
     };
 
@@ -49,7 +49,7 @@ const App = () => {
           className="h-screen flex flex-col items-start pl-32 justify-center bg-[#294122] text-[#FFEDD2]"
         >
           <h1 className="text-xl font-bold font-sans">Frontend developer<br />
-            </h1>
+          </h1>
           <h1 className="text-6xl font-bold font-aclonica">
             PORT<br />FOLIO
           </h1>
