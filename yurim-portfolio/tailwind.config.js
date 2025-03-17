@@ -16,7 +16,10 @@ export default {
         sans: ['Inter', 'sans-serif'],
         aclonica: ['Aclonica', 'sans-serif'], 
         abhaya: ['Abhaya Libre', 'serif'],
-      }
+      },
+      margin: {
+        '96': '24rem', 
+      },
     },
   },
   plugins: [],
