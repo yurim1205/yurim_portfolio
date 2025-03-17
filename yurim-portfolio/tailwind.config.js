@@ -4,12 +4,13 @@ export default {
     "./src/App.jsx",
     "./src/components/common/header.jsx",
     "./src/components/about/about.jsx",
-    "./src/components/stack/stack.jsx"
+    "./src/components/stack/stackList.jsx"
   ],
   theme: {
     extend: {
       colors: {
         main: "#294122", 
+        text: "#FFEDD2"
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
