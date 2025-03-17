@@ -9,10 +9,11 @@ import EmailIcon from "../../assets/email.png";
 const About = () => {
   const infoItems = [
     // 수정하기 편하게 아이콘 크기 따로 지정함
-    { icon: PersonIcon, title: "이름", body: "이유림", size: "h-20 w-20" },
-    { icon: CalenderIcon, title: "생년월일", body: "2000.12.05", size: "h-20 w-20" },
-    { icon: GraduationIcon, title: "전공", body: "컴퓨터소프트웨어공학", size: "h-20 w-20" },
+    { id: 1, icon: PersonIcon, title: "이름", body: "이유림", size: "h-20 w-20" },
+    { id: 2, icon: CalenderIcon, title: "생년월일", body: "2000.12.05", size: "h-20 w-20" },
+    { id: 3, icon: GraduationIcon, title: "전공", body: "컴퓨터소프트웨어공학", size: "h-20 w-20" },
     {
+      id: 4,
       icon: EmailIcon,
       title: "이메일",
       body: (
@@ -48,7 +49,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pt-36">
           {infoItems.map((item) => (
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center" key={item.id}>
               <img src={item.icon} alt={`${item.title} 아이콘`} className="h-20 w-20" />
               <p className="text-2xl mt-4 font-bold text-main">{item.title}</p>
               <p className="text-xl mt-4 text-main text-center">{item.body}</p>
