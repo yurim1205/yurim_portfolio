@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './components/common/header';
 import About from './components/about/about';
-import Stack from './components/stack/stackList';
+import StackList from './components/stack/stackList';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
@@ -61,8 +61,8 @@ const App = () => {
         </section>
 
         <section
-          id="stack">
-          <Stack />
+          id="StackList">
+          <StackList />
         </section>
 
         <section
