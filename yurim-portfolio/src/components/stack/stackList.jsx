@@ -24,12 +24,13 @@ const StackSection = ({ title, icons }) => (
 
             <div className="mt-8 flex flex-wrap justify-center items-center gap-16">
                 {icons.map((icon) => (
-                    <img
-                        key={icon.id}
-                        src={icon.src}
-                        alt={icon.alt}
-                        className="w-[130px] h-[115px] rounded-lg shadow-xl hover:shadow-lg"
-                    />
+                    <div key={icon.id} className="relative group">
+                        <img
+                            src={icon.src}
+                            alt={icon.alt}
+                            className="w-[130px] h-[115px] rounded-lg shadow-xl transition-transform duration-200 transform hover:scale-110 hover:shadow-2xl"
+                        />
+                    </div>
                 ))}
             </div>
         </div>
