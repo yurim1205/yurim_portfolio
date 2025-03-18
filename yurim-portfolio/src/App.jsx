@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/common/header';
 import About from './components/about/about';
 import StackList from './components/stack/stackList';
+import Project from './components/project/project';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
@@ -66,9 +67,8 @@ const App = () => {
         </section>
 
         <section
-          id="project"
-          className="h-screen flex items-center justify-center">
-          <h1 className="text-2xl">Project Section</h1>
+          id="project">
+          <Project />
         </section>
       </main>
     </>
