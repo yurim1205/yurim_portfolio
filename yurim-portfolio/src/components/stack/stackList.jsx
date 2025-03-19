@@ -1,35 +1,34 @@
 import React from "react";
-import HtmlIcon from "../../assets/stackIcon/HTML.svg";
-import JsIcon from "../../assets/stackIcon/JavaScript.svg";
-import CssIcon from "../../assets/stackIcon/CSS.svg";
-import TsIcon from "../../assets/stackIcon/TypeScript.svg";
-import ReactIcon from "../../assets/stackIcon/React.svg";
-import StyledComponentsIcon from "../../assets/stackIcon/StyledComponents.svg";
-import AndroidStudioIcon from "../../assets/stackIcon/AndroidStudio-Light.svg";
-import VsCodeIcon from "../../assets/stackIcon/VSCode.svg";
-import PostmanIcon from "../../assets/stackIcon/Postman.svg";
-import FigmaIcon from "../../assets/stackIcon/Figma.svg";
-import GitIcon from "../../assets/stackIcon/Git.svg";
-import GitLabIcon from "../../assets/stackIcon/GitLab-Light.svg";
+import { FrontendIcons, ToolsIcons } from "./stackData";
 
 // StackSection: title과 icons를 props로 받아서 각 섹션을 렌더링 함
 const StackSection = ({ title, icons }) => (
-    <div className="z-10 relative flex flex-col items-center">
-        <div className="flex flex-col items-start">
+    <div className="z-10 relative flex flex-col items-center w-full">
+        <div className="flex flex-col items-center">
             <div className="mt-12 w-[70%] max-w-[150px] h-[50px] bg-main rounded-full flex flex-col items-center justify-center">
-                <p className="text-[20] sm:text-[20px] text-center text-text font-sans font-thin">
+                <p className="text-[20px] sm:text-[20px] text-center text-text font-sans font-thin">
                     {title}
                 </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap justify-center items-center gap-16">
+            <div className="mt-8 grid grid-cols-3 sm:grid-cols-2 gap-8 w-full">
                 {icons.map((icon) => (
-                    <div key={icon.id} className="relative group">
+                    <div
+                        key={icon.id}
+                        className="flex items-start gap-4 bg-black/50 p-4 rounded-lg shadow-xl hover:shadow-2xl transition-transform duration-200 transform hover:scale-105"
+                    >
+                        {/* 아이콘 이미지 */}
                         <img
                             src={icon.src}
                             alt={icon.alt}
-                            className="w-[130px] h-[115px] rounded-lg shadow-xl transition-transform duration-200 transform hover:scale-110 hover:shadow-2xl"
+                            className="w-[50px] h-[50px] object-contain"
                         />
+
+                        {/* 텍스트 */}
+                        <div className="flex flex-col items-start w-[200px] h-[85px]">
+                            <h4 className="text-lg font-bold text-white">{icon.title}</h4>
+                            <p className="text-sm text-gray-300">{icon.description}</p>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -38,24 +37,6 @@ const StackSection = ({ title, icons }) => (
 );
 
 const StackList = () => {
-    const FrontendIcons = [
-        { id: 1, src: HtmlIcon, alt: "HTML Icon" },
-        { id: 2, src: JsIcon, alt: "JavaScript Icon" },
-        { id: 3, src: CssIcon, alt: "CSS Icon" },
-        { id: 4, src: TsIcon, alt: "TypeScript Icon" },
-        { id: 5, src: ReactIcon, alt: "React Icon" },
-        { id: 6, src: StyledComponentsIcon, alt: "StyledComponents Icon" },
-    ];
-
-    const ToolsIcons = [
-        { id: 7, src: AndroidStudioIcon, alt: "AndroidStudio Icon" },
-        { id: 8, src: VsCodeIcon, alt: "VsCode Icon" },
-        { id: 9, src: PostmanIcon, alt: "Postman Icon" },
-        { id: 10, src: FigmaIcon, alt: "Figma Icon" },
-        { id: 11, src: GitIcon, alt: "Git Icon" },
-        { id: 12, src: GitLabIcon, alt: "GitLab Icon" }
-    ];
-
     return (
         <section
             id="stack"
