@@ -21,7 +21,7 @@ const App = () => {
 
     const observerOptions = {
       root: null,
-      threshold: 0.1, // 10% 보이면 트리거
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -62,7 +62,7 @@ const App = () => {
         </section>
 
         <section
-          id="StackList">
+          id="stack">
           <StackList />
         </section>
 
