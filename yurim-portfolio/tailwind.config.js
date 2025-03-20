@@ -4,7 +4,8 @@ export default {
     "./src/App.jsx",
     "./src/components/common/header.jsx",
     "./src/components/about/about.jsx",
-    "./src/components/stack/stackList.jsx"
+    "./src/components/stack/stackList.jsx",
+    "./src/components/project/project.jsx"
   ],
   theme: {
     extend: {
