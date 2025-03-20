@@ -21,7 +21,7 @@ const App = () => {
 
     const observerOptions = {
       root: null,
-      threshold: 0.1,
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
