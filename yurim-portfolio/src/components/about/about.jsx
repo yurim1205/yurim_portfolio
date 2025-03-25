@@ -1,8 +1,8 @@
 import React from "react";
-import CalenderIcon from "../../assets/calendar.png";
-import PersonIcon from "../../assets/person.png";
-import GraduationIcon from "../../assets/graduation.png";
-import EmailIcon from "../../assets/email.png";
+import CalenderIcon from "../../assets/aboutIcon/calendar.png";
+import PersonIcon from "../../assets/aboutIcon/person.png";
+import GraduationIcon from "../../assets/aboutIcon/graduation.png";
+import EmailIcon from "../../assets/aboutIcon/email.png";
 
 // UI 컴포넌트는 상태 관리보다는 데이터를 받아 렌더링하는 역할이기 때문에 Observer 로직 필요 없음
 
