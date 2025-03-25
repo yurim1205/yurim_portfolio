@@ -21,9 +21,9 @@ const ProjectItem = ({ title, image, description, techStack, problem, semiTitle,
             <p className="self-start text-[20px] sm:text-[20px] text-center text-text text-sm font-sans py-4 font-semibold">
                 {date}
             </p>
-            <p className="self-start text-[20px] sm:text-[20px] text-center text-text text-sm font-sans py-4 font-semibold">
+            {/* <p className="self-start text-[20px] sm:text-[20px] text-center text-text text-sm font-sans py-4 font-semibold">
                 {url}
-            </p>
+            </p> */}
             <p className="self-start text-[20px] sm:text-[20px] text-center bg-[#68835E] text-text text-sm rounded-lg font-sans py-2 px-2">
                 {projectGithub && (
                     <a
