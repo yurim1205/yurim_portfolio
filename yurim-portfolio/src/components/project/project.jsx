@@ -24,7 +24,7 @@ const Project = () => {
                 </div>
             </section>
 
-            <footer className="w-full bg-text h-[150px] flex items-center justify-center text-main">
+            <footer className="w-full bg-text h-[200px] flex items-center justify-center text-main">
                 <div className="container mx-auto flex justify-between w-full items-center">
                     <div className="flex space-x-4">
                         <a href="https://github.com/yurim1205" target="_blank" rel="noopener noreferrer">
@@ -38,7 +38,6 @@ const Project = () => {
                     <p className="text-sm text-right">© 2025 LeeYurim. All Rights Reserved.</p>
                 </div>
             </footer>
-
         </div>
     );
 }
