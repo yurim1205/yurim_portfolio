@@ -3,7 +3,7 @@ import React from "react";
 const Header = ({ activeSection }) => {
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0,
+      top: 0,             // 맨 위로 이동
       behavior: "smooth", // 스크롤이 부드러워지는 옵션
     });
   };
