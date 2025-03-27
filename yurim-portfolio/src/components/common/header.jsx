@@ -1,10 +1,20 @@
 import React from "react";
 
 const Header = ({ activeSection }) => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // 스크롤이 부드러워지는 옵션
+    });
+  };
+
   return (
     <header className="bg-[#294122] text-[#FFEDD2] p-4 w-full fixed top-0 left-0 z-50 font-sans">
       <div className="flex justify-between items-center mx-auto">
-        <div className="text-lg font-bold">LeeYurim's Portfolio</div>
+        <div
+          className="text-lg font-bold cursor-pointer"
+          onClick={scrollToTop}
+        >LeeYurim's Portfolio</div>
         <nav>
           <ul className="flex space-x-6">
             <li>
