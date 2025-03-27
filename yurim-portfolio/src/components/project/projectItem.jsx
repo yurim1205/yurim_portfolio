@@ -42,13 +42,13 @@ const ProjectItem = ({ title, image, description, techStack, problem, semiTitle,
         <div className="w-[2px] h-[700px] bg-text items-start justify-start"></div>
 
         <div className="w-1/2 h-full flex flex-col items-start justify-start px-8">
-            <div className="mb-8 w-[90%] max-w-[450px] bg-main rounded-full items-start justify-start gap-4 flex flex-col">
-                <div className="gap-4 flex flex-col items-start justify-start mb-20">
+            <div className="mb-4 w-[90%] max-w-[450px] bg-main rounded-full items-start justify-start gap-4 flex flex-col">
+                <div className="gap-4 flex flex-col items-start justify-start">
                     <p className="text-[20px] sm:text-[20px] text-center text-main bg-text text-sm font-sans py-4 px-4 font-bold">
                         프로젝트 설명
                     </p>
                     <p
-                        className="py-2 px-4 max-w-[550px] text-[20px] sm:text-[20px] text-center text-main bg-text text-sm font-sans whitespace-pre-line break-words"
+                        className="py-2 px-4 max-w-[550px] text-[20px] sm:text-[20px] text-left text-main bg-text text-sm font-sans whitespace-pre-line break-words"
                     >
                         {description}
                     </p>
@@ -57,9 +57,9 @@ const ProjectItem = ({ title, image, description, techStack, problem, semiTitle,
 
                 <div className="gap-4 flex flex-col items-start justify-start">
                     <p className="text-[30px] sm:text-[20px] text-center text-main bg-text text-sm font-sans py-4 px-4 font-bold">
-                        문제 해결 및 배운 점
+                        배운 점
                     </p>
-                    <p className="py-2 px-4 max-w-[550px] text-[20px] sm:text-[20px] text-center text-main bg-text text-sm font-sans whitespace-normal break-words">
+                    <p className="py-2 px-4 max-w-[550px] text-[20px] sm:text-[20px] text-left text-main bg-text text-sm font-sans whitespace-pre-line break-words">
                         {problem}
                     </p>
                 </div>
