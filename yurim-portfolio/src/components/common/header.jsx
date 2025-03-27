@@ -1,11 +1,20 @@
 import React from "react";
 
 const Header = ({ activeSection }) => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,             // 맨 위로 이동
-      behavior: "smooth", // 스크롤이 부드러워지는 옵션
-    });
+  const scrollToSection = (sectionId) => {
+    if (sectionId == "top") {
+      window.scrollTo({
+        top: 0,              // 맨 위로 스크롤
+        behavior: "smooth",  // 스크롤이 부드러워지는 옵션
+      });
+    } else {                 // 아이디가 top이 아니면 각 페이지로 이동
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   return (
@@ -13,13 +22,17 @@ const Header = ({ activeSection }) => {
       <div className="flex justify-between items-center mx-auto">
         <div
           className="text-lg font-bold cursor-pointer"
-          onClick={scrollToTop}
+          onClick={() => scrollToSection("top")}
         >LeeYurim's Portfolio</div>
         <nav>
           <ul className="flex space-x-6">
             <li>
               <a
                 href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("about");
+                }}
                 className={`hover:underline ${activeSection === "about" ? "underline" : ""}`}
               >
                 ABOUT
@@ -28,6 +41,10 @@ const Header = ({ activeSection }) => {
             <li>
               <a
                 href="#stack"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("stack");
+                }}
                 className={`hover:underline ${activeSection === "stack" ? "underline" : ""}`}
               >
                 STACK
@@ -36,6 +53,10 @@ const Header = ({ activeSection }) => {
             <li>
               <a
                 href="#project"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("project");
+                }}
                 className={`hover:underline ${activeSection === "project" ? "underline" : ""}`}
               >
                 PROJECT
