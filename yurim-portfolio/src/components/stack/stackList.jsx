@@ -11,7 +11,7 @@ const StackSection = ({ title, icons }) => (
                 </p>
             </div>
 
-            <div className="mt-8 grid grid-cols-3 sm:grid-cols-2 gap-8 w-full">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                 {icons.map((icon) => (
                     <div
                         key={icon.id}
@@ -24,7 +24,6 @@ const StackSection = ({ title, icons }) => (
                             className="w-[50px] h-[50px] object-contain"
                         />
 
-                        {/* 텍스트 */}
                         <div className="flex flex-col items-start w-[200px] h-[85px]">
                             <h4 className="text-lg font-bold text-white">{icon.title}</h4>
                             <p className="text-sm text-gray-300">{icon.description}</p>
