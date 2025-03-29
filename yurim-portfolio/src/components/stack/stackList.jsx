@@ -41,7 +41,7 @@ const StackList = () => {
             id="stack"
             className="w-full min-h-screen py-20 mx-auto flex flex-col justify-start items-center relative bg-[#68835E] overflow-hidden"
         >
-            <p className="mt-8 text-[96px] sm:text-[64px] text-center font-thin font-abhaya decoration-[2px] text-[#FFEDD2]">
+            <p className="mt-8 text-[64px] sm:text-[48px] text-center font-thin font-abhaya decoration-[2px] text-[#FFEDD2]">
                 TECH STACK
             </p>
 

@@ -32,7 +32,7 @@ const About = () => {
       className="w-full min-h-screen mx-auto bg-[#FFEDD2] flex flex-col items-center justify-center px-4 py-32"
     >
       <div className="max-w-6xl w-full px-4 mb-32">
-        <p className="mb-24 text-[96px] sm:text-[64px] text-center font-thin font-abhaya decoration-[2px]">
+        <p className="mb-24 text-[64px] sm:text-[48px] text-center font-thin font-abhaya decoration-[2px]">
           ABOUT ME
         </p>
 

@@ -2,9 +2,9 @@ import React from "react";
 import { FaGithub } from 'react-icons/fa';
 
 const ProjectItem = ({ title, image, description, techStack, problem, semiTitle, date, url, projectGithub }) => (
-    <div className="w-[1200px] h-[700px] flex items-center justify-center">
+    <div className="w-full h-[700px] flex items-center justify-end ml-4">
         {/* 프로젝트 이미지 */}
-        <div className="w-1/2 h-full flex flex-col items-center justify-start mr-8">
+        <div className="w-1/2 h-full flex flex-col items-center justify-start ">
             <div className="w-full flex items-center justify-center overflow-hidden shadow-2xl mb-4">
                 <img
                     src={image}
@@ -39,10 +39,10 @@ const ProjectItem = ({ title, image, description, techStack, problem, semiTitle,
         </div>
 
         {/* 가운데 선 */}
-        <div className="w-[2px] h-[700px] bg-text items-start justify-start"></div>
+        <div className="w-[2px] h-[700px] bg-text items-start justify-start ml-8"></div>
 
-        <div className="w-1/2 h-full flex flex-col items-start justify-start px-8">
-            <div className="mb-4 w-[90%] max-w-[450px] bg-main rounded-full items-start justify-start gap-4 flex flex-col">
+        <div className="w-1/2 h-full flex flex-col items-start justify-start px-8 ml-4">
+            <div className="mb-4 w-[100%] max-w-[450px] bg-main rounded-full items-start justify-start gap-4 flex flex-col">
                 <div className="gap-4 flex flex-col items-start justify-start">
                     <p className="text-[20px] sm:text-[20px] text-center text-main bg-text text-sm font-sans py-4 px-4 font-bold">
                         프로젝트 설명
