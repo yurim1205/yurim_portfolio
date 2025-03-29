@@ -21,7 +21,7 @@ const Header = ({ activeSection }) => {
     <header className="bg-[#294122] text-[#FFEDD2] p-4 w-full fixed top-0 left-0 z-50 font-sans">
       <div className="flex justify-between items-center mx-auto">
         <div
-          className="text-lg font-bold cursor-pointer"
+          className="text-xl font-bold cursor-pointer"
           onClick={() => scrollToSection("top")}
         >LeeYurim's Portfolio</div>
         <nav>
