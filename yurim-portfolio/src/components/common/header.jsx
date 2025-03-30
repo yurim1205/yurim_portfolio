@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Header = ({ activeSection }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId) => {
     if (sectionId == "top") {
       window.scrollTo({
@@ -24,7 +26,12 @@ const Header = ({ activeSection }) => {
           className="text-xl font-bold cursor-pointer"
           onClick={() => scrollToSection("top")}
         >LeeYurim's Portfolio</div>
-        <nav>
+
+        <div className="sm:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className="text-3xl">☰</button>
+        </div>
+
+        <nav className="hidden sm:flex sm:flex-row sm:space-x-6 sm:ml-auto">
           <ul className="flex space-x-6">
             <li>
               <a
@@ -65,6 +72,51 @@ const Header = ({ activeSection }) => {
           </ul>
         </nav>
       </div>
+
+      <nav
+        className={`sm:hidden bg-[#68835E] w-full transition-all ease-in-out duration-500 overflow-hidden ${isMenuOpen ? "max-h-96" : "max-h-0"
+          }`}
+      >
+
+        <ul className="flex flex-col items-center space-y-4 p-4 font-semibold">
+          <li>
+            <a
+              href="#about"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("about");
+              }}
+              className={`hover:underline ${activeSection === "about" ? "underline" : ""}`}
+            >
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a
+              href="#stack"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("stack");
+              }}
+              className={`hover:underline ${activeSection === "stack" ? "underline" : ""}`}
+            >
+              STACK
+            </a>
+          </li>
+          <li>
+            <a
+              href="#project"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("project");
+              }}
+              className={`hover:underline ${activeSection === "project" ? "underline" : ""}`}
+            >
+              PROJECT
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
