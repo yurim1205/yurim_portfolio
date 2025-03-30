@@ -36,17 +36,17 @@ const About = () => {
           ABOUT ME
         </p>
 
-        <p className="sm:text-3xl text-center max-w-3xl mx-auto leading-8 text-main font-sans">
+        <p className="md:text-3xl text-center max-w-3xl mx-auto leading-8 text-main font-sans">
           안녕하세요! 경청을 좋아하는 이유림입니다.
         </p>
 
-        <p className="text-3xl text-center max-w-4xl mx-auto leading-snug mt-5 text-main font-sans">
+        <p className="md:text-3xl text-center max-w-4xl mx-auto leading-snug mt-5 text-main font-sans">
           <span className="font-bold">주도적</span>으로 새로운 기술을 학습하는 것을 좋아하며, <br />
           <span className="font-bold">UX를 우선시하며 개발하는</span> 프론트엔드 개발자로
           <span className="font-bold"> 성장</span>하고 싶습니다.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pt-36">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 pt-36">
           {infoItems.map((item) => (
             <div className="flex flex-col items-center" key={item.id}>
               <img src={item.icon} alt={`${item.title} 아이콘`} className="mt-10 h-20 w-20" />
