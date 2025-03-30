@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 const ProjectItem = ({ title, image, description, techStack, problem, semiTitle, date, url, projectGithub }) => (
     <div className="w-full h-[700px] flex items-center justify-end ml-4">
         {/* 프로젝트 이미지 */}
-        <div className="w-1/2 h-full flex flex-col items-start justify-start ">
+        <div className="w-1/2 h-full flex flex-col items-start justify-start">
             <div className="w-[500px] flex items-start justify-start overflow-hidden shadow-2xl mb-4">
                 <img
                     src={image}
@@ -54,7 +54,7 @@ const ProjectItem = ({ title, image, description, techStack, problem, semiTitle,
                         프로젝트 설명
                     </p>
                     <p
-                        className="py-2 px-4 max-w-[450px] text-[16px] sm:text-[15px] text-left text-main bg-text text-sm font-semibold font-sans whitespace-pre-line break-words"
+                        className="py-2 px-4 max-w-[450px] text-[16px] sm:text-[16px] text-left text-main bg-text text-sm font-semibold font-sans whitespace-pre-line break-words"
                     >
                         {description}
                     </p>
