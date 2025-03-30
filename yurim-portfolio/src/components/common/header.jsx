@@ -27,11 +27,11 @@ const Header = ({ activeSection }) => {
           onClick={() => scrollToSection("top")}
         >LeeYurim's Portfolio</div>
 
-        <div className="sm:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className="md:hidden ml-auto" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <button className="text-3xl">☰</button>
         </div>
 
-        <nav className="hidden sm:flex sm:flex-row sm:space-x-6 sm:ml-auto">
+        <nav className="hidden md:flex md:flex-row md:space-x-6">
           <ul className="flex space-x-6">
             <li>
               <a
@@ -73,8 +73,9 @@ const Header = ({ activeSection }) => {
         </nav>
       </div>
 
+      {/* 헤더 반응형 애니메이션 */}
       <nav
-        className={`sm:hidden bg-[#68835E] w-full transition-all ease-in-out duration-500 overflow-hidden ${isMenuOpen ? "max-h-96" : "max-h-0"
+        className={`md:hidden bg-[#68835E] w-full transition-all ease-in-out duration-500 overflow-hidden ${isMenuOpen ? "max-h-96" : "max-h-0"
           }`}
       >
 
@@ -84,6 +85,7 @@ const Header = ({ activeSection }) => {
               href="#about"
               onClick={(e) => {
                 e.preventDefault();
+                setIsMenuOpen(false);     // 원하는 메뉴 이동시 헤더 닫히게 됨
                 scrollToSection("about");
               }}
               className={`hover:underline ${activeSection === "about" ? "underline" : ""}`}
@@ -96,6 +98,7 @@ const Header = ({ activeSection }) => {
               href="#stack"
               onClick={(e) => {
                 e.preventDefault();
+                setIsMenuOpen(false);
                 scrollToSection("stack");
               }}
               className={`hover:underline ${activeSection === "stack" ? "underline" : ""}`}
@@ -108,6 +111,7 @@ const Header = ({ activeSection }) => {
               href="#project"
               onClick={(e) => {
                 e.preventDefault();
+                setIsMenuOpen(false);
                 scrollToSection("project");
               }}
               className={`hover:underline ${activeSection === "project" ? "underline" : ""}`}
