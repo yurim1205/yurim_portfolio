@@ -29,7 +29,7 @@ export const projectData = [
         추후 TypeScript와 Next.js으로 마이그레이션 할 계획입니다.
         `,
         techStack: [css, HTML, JS, React, Tailwind, Vite],
-        date: "2025.3.6 ~ 2025.3.31",
+        date: "2025.3.6 ~ 2025.4.1",
         url: "",
         projectGithub: "https://github.com/yurim1205/yurim_portfolio"
     },

@@ -21,9 +21,7 @@ const Project = () => {
 
     return (
         <div className="min-h-screen flex flex-col justify-between bg-main">
-            <section
-                id="project"
-                className="w-full py-20 mx-auto flex flex-col items-center relative bg-main overflow-hidden">
+            <section id="project" className="w-full py-20 mx-auto flex flex-col items-center relative bg-main overflow-hidden">
                 <p className="mt-4 text-[64px] sm:text-[48px] text-center font-thin font-abhaya decoration-[2px] text-[#FFEDD2]">
                     PROJECT
                 </p>
@@ -31,7 +29,7 @@ const Project = () => {
                 <div className="mt-4 w-[1200px] h-[2px] bg-text"></div>
 
                 <div className="relative w-full flex items-center justify-center mt-8">
-                    <div className="relative w-[1200px] h-auto overflow-hidden flex items-center justify-between">
+                    <div className="relative w-full max-w-[1000px] h-auto overflow-hidden flex items-center justify-between">
                         {/* 왼쪽 화살표 */}
                         <button
                             onClick={handlePrev}
@@ -42,15 +40,16 @@ const Project = () => {
 
                         <div className="w-full h-auto overflow-hidden relative">
                             <div
-                                className="flex transition-transform duration-500"
+                                className="flex transition-transform duration-500 ease-in-out"
                                 style={{
                                     transform: `translateX(-${currentIndex * 100}%)`,
+                                    width: "100%", // 전체 크기를 100%로 맞춤
                                 }}
                             >
                                 {projectData.map((project) => (
                                     <div
                                         key={project.id}
-                                        className="w-[1200px] flex-shrink-0"
+                                        className="w-full flex-shrink-0 px-4 flex justify-center"
                                     >
                                         <ProjectItem {...project} />
                                     </div>
@@ -69,12 +68,12 @@ const Project = () => {
                 </div>
 
                 {/* 슬라이드 하단 점 */}
-                <div className="flex space-x-2 absolute bottom-[140px]">
+                <div className="flex space-x-2 mt-8">
                     {projectData.map((_, index) => (
                         <div
                             key={index}
-                            className={`w-3 h-3 rounded-full bg-[#FFEDD2] ${currentIndex === index ? "bg-[#68835E]" : "bg-opacity-50"
-                                } transition-all duration-300`}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === index ? "bg-[#68835E]" : "bg-[#FFEDD2] opacity-50"
+                                }`}
                         ></div>
                     ))}
                 </div>
@@ -96,6 +95,6 @@ const Project = () => {
             </footer>
         </div>
     );
-}
+};
 
-export default Project; 
+export default Project;
