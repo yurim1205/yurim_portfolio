@@ -1,5 +1,6 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { Button } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const ProjectItem = ({ title, image, description, techStack, problem, semiTitle, date, url, projectGithub }) => (
     <div className="w-full max-w-[1000px] flex flex-col md:flex-row md:justify-center items-start gap-10 mx-auto px-4">
@@ -12,13 +13,43 @@ const ProjectItem = ({ title, image, description, techStack, problem, semiTitle,
                 {title}
             </p>
             <p className="text-sm sm:text-md font-semibold text-text py-2">{date}</p>
-            <p className="text-sm sm:text-md font-semibold text-text py-2">{url}</p>
-            {projectGithub && (
-                <a href={projectGithub} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-[#68835E] text-text rounded-lg px-4 py-2 mt-2">
-                    <FaGithub size={20} /> GitHub
-                </a>
-            )}
+            <div className="py-3 flex gap-4">
+                {projectGithub && (
+                    <Button
+                        href={projectGithub}    // 링크로 연결
+                        target="_blank"         // 새 탭에서 열리게 설정
+                        rel="noopener noreferrer"
+                        variant="contained"
+                        startIcon={<GitHubIcon />}
+                        sx={{
+                            backgroundColor: '#68835E',
+                            color: '#FFEDD2',
+                            '&:hover': {
+                                backgroundColor: '#5a703f',
+                            },
+                        }}
+                    >
+                        GitHub
+                    </Button>
+                )}
+                {url && (
+                    <Button
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="contained"
+                        sx={{
+                            backgroundColor: '#68835E',
+                            color: '#FFEDD2',
+                            '&:hover': {
+                                backgroundColor: '#5a703f',
+                            },
+                        }}
+                    >
+                        👩🏻‍💻 사이트 바로가기
+                    </Button>
+                )}
+            </div>
         </div>
 
         {/* 프로젝트 설명 */}

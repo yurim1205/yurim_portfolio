@@ -30,7 +30,7 @@ export const projectData = [
         `,
         techStack: [css, HTML, JS, React, Tailwind, Vite],
         date: "2025.3.6 ~ 2025.4.1",
-        url: "",
+        url: "https://www.naver.com/",
         projectGithub: "https://github.com/yurim1205/yurim_portfolio"
     },
     {
@@ -48,7 +48,7 @@ export const projectData = [
         `,
         techStack: [css, HTML, JS, React, Vite, StyledComponents, TS, NestJS],
         date: "2024.4.1 ~ 2024.4.19",
-        url: "",
+        url: "https://www.trip-teller.com/",
         projectGithub: "https://github.com/TripTeller-repository"
     }
 ];
