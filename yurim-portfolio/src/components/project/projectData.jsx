@@ -30,7 +30,7 @@ export const projectData = [
         `,
         techStack: [css, HTML, JS, React, Tailwind, Vite],
         date: "2025.3.6 ~ 2025.4.1",
-        url: "https://www.naver.com/",
+        url: "https://yurim-portfolio-one.vercel.app/",
         projectGithub: "https://github.com/yurim1205/yurim_portfolio"
     },
     {
