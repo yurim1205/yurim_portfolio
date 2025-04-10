@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-const ProjectItem = ({ title, image, description, techStack, problem, semiTitle, date, url, projectGithub }) => (
+const ProjectItem = ({ title, image, description, techStack, problem, semiTitle, date, url, projectGithub, velogUrl }) => (
     <div className="w-full max-w-[1000px] flex flex-col md:flex-row md:justify-center items-start gap-10 mx-auto px-4">
         <div className="w-full md:w-[45%] flex flex-col items-start">
             <div className="w-full max-w-[500px] md:max-w-[500px] shadow-2xl mb-4 mx-auto">
@@ -47,6 +47,23 @@ const ProjectItem = ({ title, image, description, techStack, problem, semiTitle,
                         }}
                     >
                         👩🏻‍💻 사이트 바로가기
+                    </Button>
+                )}
+                {url && (
+                    <Button
+                        href={velogUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="contained"
+                        sx={{
+                            backgroundColor: '#68835E',
+                            color: '#FFEDD2',
+                            '&:hover': {
+                                backgroundColor: '#5a703f',
+                            },
+                        }}
+                    >
+                        프로젝트 회고
                     </Button>
                 )}
             </div>

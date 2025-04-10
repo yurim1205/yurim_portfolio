@@ -31,7 +31,8 @@ export const projectData = [
         techStack: [css, HTML, JS, React, Tailwind, Vite],
         date: "2025.3.6 ~ 2025.4.1",
         url: "https://yurim-portfolio-one.vercel.app/",
-        projectGithub: "https://github.com/yurim1205/yurim_portfolio"
+        projectGithub: "https://github.com/yurim1205/yurim_portfolio",
+        velogUrl: "https://velog.io/write?id=06643756-1951-4092-a47a-7e9fe7dde677"
     },
     {
         id: 2,
@@ -49,6 +50,7 @@ export const projectData = [
         techStack: [css, HTML, JS, React, Vite, StyledComponents, TS, NestJS],
         date: "2024.4.1 ~ 2024.4.19",
         url: "https://www.trip-teller.com/",
-        projectGithub: "https://github.com/TripTeller-repository"
+        projectGithub: "https://github.com/TripTeller-repository",
+        velogUrl: "https://velog.io/@yurimi/%EC%97%98%EB%A6%AC%EC%8A%A4-SW-%ED%8A%B8%EB%9E%99-2%EC%B0%A8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0"
     }
 ];
