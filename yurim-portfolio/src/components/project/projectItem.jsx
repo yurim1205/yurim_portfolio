@@ -49,7 +49,7 @@ const ProjectItem = ({ title, image, description, techStack, problem, semiTitle,
                         👩🏻‍💻 사이트 바로가기
                     </Button>
                 )}
-                {url && (
+                {velogUrl && (
                     <Button
                         href={velogUrl}
                         target="_blank"
