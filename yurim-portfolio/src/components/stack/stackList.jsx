@@ -6,7 +6,7 @@ import { FrontendIcons, ToolsIcons } from "./stackData";
 // title: 섹션 제목
 // icons: 아이콘 데이터 배열
 const StackSection = ({ title, icons }) => (
-    <div className="z-10 relative flex flex-col items-center w-full">
+    <div className="relative flex flex-col items-center w-full">
         <div className="flex flex-col items-center">
             <div className="mt-12 w-[70%] max-w-[150px] h-[50px] bg-main rounded-full flex flex-col items-center justify-center">
                 <p className="text-[20px] sm:text-[20px] text-center text-text font-sans font-thin">
