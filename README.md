@@ -26,4 +26,4 @@
 - 🔗 [Header](https://www.notion.so/header-1c9639c7754880f49359e11f4b07ca4c?pvs=4)
 
 ## 💡 회고
-🔗 
+🔗 [회고](https://velog.io/@yurimi/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%82%AC%EC%9D%B4%ED%8A%B8-%ED%9A%8C%EA%B3%A0)
