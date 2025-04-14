@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 import Header from './components/common/header';
 import About from './components/about/about';
 import StackList from './components/stack/stackList';
@@ -71,13 +72,23 @@ const App = () => {
       <main className="relative">
         <section
           id="main"
-          className="h-screen flex flex-col items-start pl-32 justify-center bg-[#294122] text-[#FFEDD2]"
+          className="h-screen flex flex-col items-center justify-center bg-[#294122] text-[#FFEDD2]"
         >
-          <h1 className="text-xl font-bold font-sans">Frontend developer<br />
-          </h1>
-          <h1 className="text-6xl font-bold font-aclonica">
-            PORT<br />FOLIO
-          </h1>
+          <div className="flex flex-col md:flex-row items-center justify-center space-x-48">
+            <motion.h1
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ type: 'spring', visualDuration: 0.6, bounce: 0.6 }}
+            >
+              <div className="origin-bottom-right animate-wiggle text-9xl">👋🏻</div>
+              <br />
+            </motion.h1>
+            <h1 className="text-3xl font-bold font-aclonica text-right">
+              안녕하세요 !<br />
+              사용자를 고려한 편리한 인터페이스를 구현하는<br />
+              프론트엔드 개발자 이유림입니다.
+            </h1>
+          </div>
         </section>
 
         <section
