@@ -2,12 +2,7 @@
 export default {
   content: [
     "./src/App.jsx",
-    "./src/components/common/header.jsx",
-    "./src/components/about/about.jsx",
-    "./src/components/stack/stackList.jsx",
-    "./src/components/project/project.jsx",
-    "./src/components/project/projectItem.jsx",
-    "./src/components/intro/introSection.jsx"
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
