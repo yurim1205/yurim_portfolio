@@ -69,6 +69,18 @@ const Header = ({ activeSection }) => {
                 PROJECT
               </a>
             </li>
+            <li>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("contact");
+                }}
+                className={`hover:underline ${activeSection === "contact" ? "underline" : ""}`}
+              >
+                CONTACT
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -117,6 +129,19 @@ const Header = ({ activeSection }) => {
               className={`hover:underline ${activeSection === "project" ? "underline" : ""}`}
             >
               PROJECT
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                scrollToSection("contact");
+              }}
+              className={`hover:underline ${activeSection === "contact" ? "underline" : ""}`}
+            >
+              CONTACT
             </a>
           </li>
         </ul>
