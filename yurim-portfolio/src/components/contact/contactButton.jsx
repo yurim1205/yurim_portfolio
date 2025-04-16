@@ -4,8 +4,9 @@ function ContactButton({ href, text }) {
     return (
         <a
             href={href}
-            className="rounded-md bg-primary/20 px-5 py-3 text-center text-dark shadow-md hover:bg-primary/30"
-            aria-label={`${text} - 새 탭에서 열기`}
+            className="mt-8 rounded-full bg-white px-5 py-3 h-12 w-48 text-center
+         text-main text-bold shadow-md hover:bg-text hover:scale-115 transition-transform 
+         duration-500"
             target="_blank"
             rel="noopener noreferrer"
         >
