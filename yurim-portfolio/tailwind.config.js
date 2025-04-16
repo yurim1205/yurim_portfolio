@@ -15,6 +15,9 @@ export default {
       margin: {
         '96': '24rem', 
       },
+      scale: {
+        '115': '1.15'
+      },
       boxShadow: {
         '3xl': '0 15px 30px rgba(0, 0, 0, 0.1)',
         '4xl': '0 20px 40px rgba(0, 0, 0, 0.1)',
