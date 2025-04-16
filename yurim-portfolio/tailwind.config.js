@@ -6,7 +6,8 @@ export default {
     "./src/components/about/about.jsx",
     "./src/components/stack/stackList.jsx",
     "./src/components/project/project.jsx",
-    "./src/components/project/projectItem.jsx"
+    "./src/components/project/projectItem.jsx",
+    "./src/components/intro/introSection.jsx"
   ],
   theme: {
     extend: {
