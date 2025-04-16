@@ -1,11 +1,11 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
 import Header from './components/common/header';
 import About from './components/about/about';
 import StackList from './components/stack/stackList';
 import Project from './components/project/project';
 import buttonIcon from "./assets/topButton.png";
+import IntroSection from './intro/introSection';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
@@ -70,27 +70,7 @@ const App = () => {
     <>
       <Header activeSection={activeSection} />
       <main className="relative">
-        <section
-          id="main"
-          className="h-screen flex flex-col items-center justify-center bg-[#294122] text-[#FFEDD2]"
-        >
-          <div className="flex flex-col md:flex-row items-center justify-center space-x-48">
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ type: 'spring', visualDuration: 0.6, bounce: 0.6 }}
-            >
-              <div className="origin-bottom-right animate-wiggle text-9xl">👋🏻</div>
-            </motion.div>
-
-            <h1 className="text-3xl font-bold font-aclonica text-right">
-              안녕하세요 !<br />
-              사용자를 고려한 편리한 인터페이스를 구현하는<br />
-              프론트엔드 개발자 이유림입니다.
-            </h1>
-          </div>
-        </section>
-
+        <IntroSection />
         <section
           id="about">
           <About />
