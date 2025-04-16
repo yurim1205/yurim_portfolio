@@ -6,6 +6,7 @@ import StackList from './components/stack/stackList';
 import Project from './components/project/project';
 import buttonIcon from "./assets/topButton.png";
 import IntroSection from './intro/introSection';
+import ContactSecion from './components/contact/contact';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
@@ -84,6 +85,12 @@ const App = () => {
         <section
           id="project">
           <Project />
+        </section>
+
+        <section
+          id="contact">
+          <ContactSecion />
+
         </section>
       </main>
 
