@@ -4,9 +4,9 @@ import Header from './components/common/header';
 import About from './components/about/about';
 import StackList from './components/stack/stackList';
 import Project from './components/project/project';
-import buttonIcon from "./assets/topButton.png";
 import IntroSection from './intro/introSection';
 import ContactSecion from './components/contact/contact';
+import TopButton from './components/common/topButton';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
@@ -45,13 +45,6 @@ const App = () => {
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
     // Top 버튼을 위한 스크롤 감지
     const handleScroll = () => {
@@ -72,36 +65,25 @@ const App = () => {
       <Header activeSection={activeSection} />
       <main className="relative">
         <IntroSection />
-        <section
-          id="about">
+
+        <section id="about">
           <About />
         </section>
 
-        <section
-          id="stack">
+        <section id="stack">
           <StackList />
         </section>
 
-        <section
-          id="project">
+        <section id="project">
           <Project />
         </section>
 
-        <section
-          id="contact">
+        <section id="contact">
           <ContactSecion />
-
         </section>
       </main>
 
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-5 right-5 bg-white p-2 rounded-full shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl z-50"
-        >
-          <img src={buttonIcon} className="w-10 h-10" />
-        </button>
-      )}
+      <TopButton showButton={showButton} />
     </>
   );
 };

@@ -9,7 +9,6 @@ import VsCodeIcon from "../../assets/stackIcon/VSCode.svg";
 import PostmanIcon from "../../assets/stackIcon/Postman.svg";
 import FigmaIcon from "../../assets/stackIcon/Figma.svg";
 import GitIcon from "../../assets/stackIcon/Git.svg";
-import GitLabIcon from "../../assets/stackIcon/GitLab-Light.svg";
 import TailwindIcon from "../../assets/stackIcon/tailwind-css.png";
 
 export const FrontendIcons = [
@@ -28,5 +27,4 @@ export const ToolsIcons = [
     { id: 9, src: PostmanIcon, alt: "Postman Icon", title: "Postman", description: "REST API 테스트 및 공유 시 사용하는 툴입니다." },
     { id: 10, src: FigmaIcon, alt: "Figma Icon", title: "Figma", description: "UI/UX 디자인 및 프로토타입을 제작할 수 있습니다." },
     { id: 11, src: GitIcon, alt: "Git Icon", title: "Git", description: "Github와 함께 사용하며, 로컬 & 원격 저장소를 이용한 버전 관리 및 협업이 가능합니다." },
-    { id: 12, src: GitLabIcon, alt: "GitLab Icon", title: "GitLab", description: "GitLab을 통해 프로젝트를 관리하며 협업한 경험이 있습니다." }
 ];
