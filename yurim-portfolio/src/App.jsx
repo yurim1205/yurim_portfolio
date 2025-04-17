@@ -1,10 +1,10 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import Header from './components/common/header';
+import Header from './components/common/header/header';
 import About from './components/about/about';
 import StackList from './components/stack/stackList';
 import Project from './components/project/project';
-import IntroSection from './intro/introSection';
+import IntroSection from './components/intro/introSection';
 import ContactSecion from './components/contact/contact';
 import TopButton from './components/common/topButton';
 
