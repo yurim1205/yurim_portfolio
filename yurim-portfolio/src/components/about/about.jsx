@@ -36,10 +36,6 @@ const About = () => {
           ABOUT ME
         </p>
 
-        <p className="md:text-3xl text-center max-w-3xl mx-auto leading-8 text-main font-sans">
-          안녕하세요! 경청을 좋아하는 이유림입니다.
-        </p>
-
         <p className="md:text-3xl text-center max-w-4xl mx-auto leading-snug mt-5 text-main font-sans">
           <span className="font-bold">주도적</span>으로 새로운 기술을 학습하는 것을 좋아하며, <br />
           <span className="font-bold">UX를 우선시하며 개발하는</span> 프론트엔드 개발자로
