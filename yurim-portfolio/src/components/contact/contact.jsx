@@ -5,7 +5,7 @@ import emailIcon from "../../assets/email.jpg";
 import { CONTACT_LINKS } from "./contactData";
 import ContactButton from "./contactButton";
 
-function ContactSecion() {
+function ContactSection() {
     return (
         <>
             <section
@@ -57,4 +57,4 @@ function ContactSecion() {
     );
 }
 
-export default ContactSecion;
+export default ContactSection;

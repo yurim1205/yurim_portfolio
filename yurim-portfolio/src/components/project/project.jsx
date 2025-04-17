@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { projectData } from "./projectData";
 import ProjectItem from "./projectItem";
 
-const Project = () => {
+const ProjectSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePrev = () => {
@@ -80,4 +80,4 @@ const Project = () => {
     );
 };
 
-export default Project;
+export default ProjectSection;

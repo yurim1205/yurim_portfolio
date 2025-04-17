@@ -5,7 +5,7 @@ import { FrontendIcons, ToolsIcons } from "./stackData";
 
 // title: 섹션 제목
 // icons: 아이콘 데이터 배열
-const StackSection = ({ title, icons }) => (
+const Stack = ({ title, icons }) => (
     <div className="z-10 relative flex flex-col items-center w-full">
         <div className="flex flex-col items-center">
             <div className="mt-12 w-[70%] max-w-[150px] h-[50px] bg-main rounded-full flex flex-col items-center justify-center">
@@ -38,7 +38,7 @@ const StackSection = ({ title, icons }) => (
     </div>
 );
 
-const StackList = () => {
+const StackSection = () => {
     return (
         <section
             id="stack"
@@ -48,13 +48,13 @@ const StackList = () => {
                 TECH STACK
             </p>
 
-            <StackSection title="Frontend" icons={FrontendIcons} />
+            <Stack title="Frontend" icons={FrontendIcons} />
             <br></br>
             <br></br>
             <br></br>
-            <StackSection title="Tools" icons={ToolsIcons} />
+            <Stack title="Tools" icons={ToolsIcons} />
         </section>
     );
 };
 
-export default StackList;
+export default StackSection;

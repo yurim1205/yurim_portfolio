@@ -1,11 +1,11 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './components/common/header/header';
-import About from './components/about/about';
-import StackList from './components/stack/stackList';
-import Project from './components/project/project';
-import IntroSection from './components/intro/introSection';
-import ContactSecion from './components/contact/contact';
+import AboutSection from './components/about/about';
+import StackSection from './components/stack/stackList';
+import ProjectSection from './components/project/project';
+import IntroSection from './components/intro/intro';
+import ContactSection from './components/contact/contact';
 import TopButton from './components/common/topButton';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
@@ -67,19 +67,19 @@ const App = () => {
         <IntroSection />
 
         <section id="about">
-          <About />
+          <AboutSection />
         </section>
 
         <section id="stack">
-          <StackList />
+          <StackSection />
         </section>
 
         <section id="project">
-          <Project />
+          <ProjectSection />
         </section>
 
         <section id="contact">
-          <ContactSecion />
+          <ContactSection />
         </section>
       </main>
 

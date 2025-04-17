@@ -6,7 +6,7 @@ import EmailIcon from "../../assets/aboutIcon/email.png";
 
 // UI 컴포넌트는 상태 관리보다는 데이터를 받아 렌더링하는 역할이기 때문에 Observer 로직 필요 없음
 
-const About = () => {
+const AboutSection = () => {
   const infoItems = [
     // 수정하기 편하게 아이콘 크기 따로 지정함
     { id: 1, icon: PersonIcon, body: "이유림", size: "h-20 w-20" },
@@ -55,4 +55,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;
