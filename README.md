@@ -3,7 +3,7 @@
 
 #### 🔖 개인 프로젝트
 
-[배포 링크](https://yurim-portfolio-one.vercel.app/)
+[서비스 링크](https://yurim-portfolio-one.vercel.app/)
 
 #### ⏱️ 프로젝트 기간 
 2025.03.06 ~ 2025.04
