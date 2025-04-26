@@ -6,7 +6,7 @@
 [배포 링크](https://yurim-portfolio-one.vercel.app/)
 
 #### ⏱️ 프로젝트 기간 
-2025.03.06 ~ 계속 진행 중
+2025.03.06 ~ 2025.04
 
 ## 👩🏻‍💻 기술 스택 
 <span><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"></span>
