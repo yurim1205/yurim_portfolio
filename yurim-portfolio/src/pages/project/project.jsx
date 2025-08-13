@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { projectData } from "../../data/projectData";
 import ProjectCard from "../../components/cards/projectCard";
+import ProjectDetailModal from "../../components/modal/projectDetailModal";
 
 const ProjectSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [selectedProject, setSelectedProject] = useState(null);
     const itemsPerPage = 2;
 
     const handlePrev = () => {
@@ -53,11 +55,23 @@ const ProjectSection = () => {
                                 image={project.image}
                                 title={project.title}
                                 description={project.description}
-                                onClick={() => window.open(project.url, "_blank")}
+                                onClick={() => {
+                                    setSelectedProject(project)}}
                             />
                         ))}
-                        </div>
 
+                        {selectedProject && (
+                                <ProjectDetailModal onClose={() => setSelectedProject(null)}>
+                                <h2 className="text-xl font-bold mb-4">{selectedProject.title}</h2>
+                                <p className="mb-4">{selectedProject.description}</p>
+                                <img
+                                    src={selectedProject.image}
+                                    alt={selectedProject.title}
+                                    className="w-full rounded-lg"
+                                />
+                                </ProjectDetailModal>
+                            )}
+                        </div>
 
                     {/* 오른쪽 화살표 */}
                     <button
