@@ -1,6 +1,6 @@
 import projectImg1 from "../assets/projectImg/ABOUT.png";
 import projectImg2 from "../assets/projectImg/tripTeller.png";
-import projectImg3 from "../assets/projectImg/labGuard.png";
+import projectImg3 from "../assets/projectImg/labguard.png";
 import css from "../assets/stackIcon/CSS.svg";
 import HTML from "../assets/stackIcon/HTML.svg";
 import JS from "../assets/stackIcon/JavaScript.svg";
