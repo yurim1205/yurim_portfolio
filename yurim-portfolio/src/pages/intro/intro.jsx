@@ -1,6 +1,6 @@
 import React from "react";
-import HandIcon from "./handIcon";
-import IntroText from "./introText";
+import HandIcon from "../../components/intro/handIcon";
+import IntroText from "../../components/intro/introText";
 
 const IntroSection = () => {
     return (

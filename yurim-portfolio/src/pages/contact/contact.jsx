@@ -2,8 +2,8 @@ import React from "react";
 // import githubIcon from "../../assets/footerIcon/github.png";
 // import velogIcon from "../../assets/footerIcon/velog.png";
 import emailIcon from "../../assets/email.jpg";
-import { CONTACT_LINKS } from "./contactData";
-import ContactButton from "./contactButton";
+import { CONTACT_LINKS } from "../../data/contactData";
+import ContactButton from "../../components/buttons/contactButton";
 
 function ContactSection() {
     return (

@@ -1,26 +1,40 @@
-import projectImg1 from "../../assets/projectImg/ABOUT.png";
-import projectImg2 from "../../assets/projectImg/tripTeller.png";
-import css from "../../assets/stackIcon/CSS.svg";
-import HTML from "../../assets/stackIcon/HTML.svg";
-import JS from "../../assets/stackIcon/JavaScript.svg";
-import React from "../../assets/stackIcon/React.svg";
-import Tailwind from "../../assets/stackIcon/tailwind-css.png";
-import Vite from "../../assets/stackIcon/Vite-Dark.svg";
-import StyledComponents from "../../assets/stackIcon/StyledComponents.svg";
-import TS from "../../assets/stackIcon/TypeScript.svg";
-import NestJS from "../../assets/stackIcon/NestJS.svg";
+import projectImg1 from "../assets/projectImg/ABOUT.png";
+import projectImg2 from "../assets/projectImg/tripTeller.png";
+import projectImg3 from "../assets/projectImg/labGuard.png";
+import css from "../assets/stackIcon/CSS.svg";
+import HTML from "../assets/stackIcon/HTML.svg";
+import JS from "../assets/stackIcon/JavaScript.svg";
+import React from "../assets/stackIcon/React.svg";
+import Tailwind from "../assets/stackIcon/tailwind-css.png";
+import Vite from "../assets/stackIcon/Vite-Dark.svg";
+import StyledComponents from "../assets/stackIcon/StyledComponents.svg";
+import TS from "../assets/stackIcon/TypeScript.svg";
+import NestJS from "../assets/stackIcon/NestJS.svg";
 
 export const projectData = [
     {
         id: 1,
+        title: "랩 가드",
+        semiTitle: "팀 프로젝트",
+        image: projectImg3,
+        description: `Ai 기반 실험실 안전 보조 서비스`,
+        problem: `팀 프로젝트이기에 협업 과정이 흥미로웠습니다.
+
+        프론트엔드와 백엔드 간의 협업 과정에서 소통의 중요성을 배웠습니다.
+        `,
+        techStack: [css, HTML, JS, React, Tailwind, Vite],
+        date: "2025.5 ~ 2025.7",
+        url: "https://yurim-portfolio-one.vercel.app/",
+        projectGithub: "https://github.com/yurim1205/yurim_portfolio",
+        velogUrl: "https://velog.io/write?id=06643756-1951-4092-a47a-7e9fe7dde677"
+    },
+    {
+        id: 2,
         title: "포트폴리오 사이트",
         semiTitle: "개인 프로젝트",
         image: projectImg1,
-        description: `포트폴리오를 위해 제작한 웹사이트입니다.
+        description: `포트폴리오를 위해 제작한 웹사이트
 
-        사용자에게 편리함을 제공하기 위해 반응형 웹으로 제작하여 모든 환경에서 확인할 수 있습니다.
-
-        리액트 프로젝트의 특징인 재사용 컴포넌트를 활용해 유지보수에 용이합니다.
         `,
         problem: `개인 프로젝트이기에 디자인부터 컴포넌트 세분화까지 혼자 기획하는 과정이 흥미로웠습니다.
 
@@ -35,13 +49,11 @@ export const projectData = [
         velogUrl: "https://velog.io/write?id=06643756-1951-4092-a47a-7e9fe7dde677"
     },
     {
-        id: 2,
+        id: 3,
         title: "TripTeller",
         semiTitle: "팀 프로젝트 (6인)",
         image: projectImg2,
-        description: `TripTeller는 사용자의 여행 일정을 계획하고, 여행 이야기를 기록하며 추억할 수 있는 서비스입니다.
-
-        엘리스트랙 부트캠프에서 진행한 팀 프로젝트로, 프론트엔드 포지션을 맡았습니다.
+        description: `여행 일정을 계획하고, 여행 기록을 공유하는 서비스
         `,
         problem: `처음 진행해본 리액트 프로젝트라 컴포넌트 세분화에 어려움을 느꼈습니다.
 

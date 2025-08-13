@@ -1,15 +1,15 @@
-import HtmlIcon from "../../assets/stackIcon/HTML.svg";
-import JsIcon from "../../assets/stackIcon/JavaScript.svg";
-import CssIcon from "../../assets/stackIcon/CSS.svg";
-import TsIcon from "../../assets/stackIcon/TypeScript.svg";
-import ReactIcon from "../../assets/stackIcon/React.svg";
-import StyledComponentsIcon from "../../assets/stackIcon/StyledComponents.svg";
-import AndroidStudioIcon from "../../assets/stackIcon/AndroidStudio-Light.svg";
-import VsCodeIcon from "../../assets/stackIcon/VSCode.svg";
-import PostmanIcon from "../../assets/stackIcon/Postman.svg";
-import FigmaIcon from "../../assets/stackIcon/Figma.svg";
-import GitIcon from "../../assets/stackIcon/Git.svg";
-import TailwindIcon from "../../assets/stackIcon/tailwind-css.png";
+import HtmlIcon from "../assets/stackIcon/HTML.svg";
+import JsIcon from "../assets/stackIcon/JavaScript.svg";
+import CssIcon from "../assets/stackIcon/CSS.svg";
+import TsIcon from "../assets/stackIcon/TypeScript.svg";
+import ReactIcon from "../assets/stackIcon/React.svg";
+import StyledComponentsIcon from "../assets/stackIcon/StyledComponents.svg";
+import AndroidStudioIcon from "../assets/stackIcon/AndroidStudio-Light.svg";
+import VsCodeIcon from "../assets/stackIcon/VSCode.svg";
+import PostmanIcon from "../assets/stackIcon/Postman.svg";
+import FigmaIcon from "../assets/stackIcon/Figma.svg";
+import GitIcon from "../assets/stackIcon/Git.svg";
+import TailwindIcon from "../assets/stackIcon/tailwind-css.png";
 
 export const FrontendIcons = [
     { id: 1, src: HtmlIcon, alt: "Html", title: "HTML5", description: "웹 표준을 준수하며, 반응형 웹을 구축하여 최적화된 사용자 경험을 제공합니다." },

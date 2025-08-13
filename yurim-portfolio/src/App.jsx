@@ -1,12 +1,12 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './components/common/header/header';
-import AboutSection from './components/about/about';
-import StackSection from './components/stack/stackList';
-import ProjectSection from './components/project/project';
-import IntroSection from './components/intro/intro';
-import ContactSection from './components/contact/contact';
-import TopButton from './components/common/topButton';
+import AboutSection from './pages/about/about';
+import StackSection from './pages/stack/stackList';
+import ProjectSection from './pages/project/project';
+import IntroSection from './pages/intro/intro';
+import ContactSection from './pages/contact/contact';
+import TopButton from './components/buttons/topButton';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !

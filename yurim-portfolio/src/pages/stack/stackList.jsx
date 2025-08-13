@@ -1,5 +1,5 @@
 import React from "react";
-import { FrontendIcons, ToolsIcons } from "./stackData";
+import { FrontendIcons, ToolsIcons } from "../../data/stackData";
 
 // StackSection: title과 icons를 props로 받아서 각 섹션을 렌더링 함
 
