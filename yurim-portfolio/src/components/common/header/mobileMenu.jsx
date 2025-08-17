@@ -7,7 +7,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection 
             }`}
     >
         <ul className="flex flex-col items-center space-y-4 p-4 font-semibold">
-            {["about", "stack", "project", "contact"].map((id) => (
+            {["about", "stack", "project"].map((id) => (
                 <NavLink
                     key={id}
                     id={id}

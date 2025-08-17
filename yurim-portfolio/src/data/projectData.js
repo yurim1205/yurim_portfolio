@@ -1,6 +1,6 @@
-import projectImg1 from "../assets/projectImg/ABOUT.png";
-import projectImg2 from "../assets/projectImg/tripTeller.png";
-import projectImg3 from "../assets/projectImg/labguard.png";
+import projectImg1 from "../assets/projectImg/portfolio.webp";
+import projectImg2 from "../assets/projectImg/tripTeller.webp";
+import projectImg3 from "../assets/projectImg/labguard.webp";
 import css from "../assets/stackIcon/CSS.svg";
 import HTML from "../assets/stackIcon/HTML.svg";
 import JS from "../assets/stackIcon/JavaScript.svg";
@@ -14,9 +14,11 @@ import NestJS from "../assets/stackIcon/NestJS.svg";
 export const projectData = [
     {
         id: 1,
-        title: "랩 가드",
+        title: "Lab Guard",
         semiTitle: "팀 프로젝트",
-        image: projectImg3,
+        image: projectImg3, // fallback (일반 이미지)
+        imageWebp: projectImg3, // 일반 해상도 WebP
+        // imageWebp2x: projectImg3, // 고해상도 WebP (올바른 import 사용)
         description: `Ai 기반 실험실 안전 보조 서비스`,
         problem: `팀 프로젝트이기에 협업 과정이 흥미로웠습니다.
 
@@ -32,7 +34,8 @@ export const projectData = [
         id: 2,
         title: "포트폴리오 사이트",
         semiTitle: "개인 프로젝트",
-        image: projectImg1,
+        image: projectImg1, // fallback
+        imageWebp: projectImg1,      
         description: `포트폴리오를 위해 제작한 웹사이트
 
         `,
@@ -52,7 +55,8 @@ export const projectData = [
         id: 3,
         title: "TripTeller",
         semiTitle: "팀 프로젝트 (6인)",
-        image: projectImg2,
+        image: projectImg2, // fallback
+        imageWebp: projectImg2,    
         description: `여행 일정을 계획하고, 여행 기록을 공유하는 서비스
         `,
         problem: `처음 진행해본 리액트 프로젝트라 컴포넌트 세분화에 어려움을 느꼈습니다.

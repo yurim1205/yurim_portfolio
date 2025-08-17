@@ -33,7 +33,7 @@ const Header = ({ activeSection }) => {
 
         <nav className="hidden md:flex md:flex-row md:space-x-6">
           <ul className="flex space-x-6">
-            {["about", "stack", "project", "contact"].map((id) => (
+            {["about", "stack", "project"].map((id) => (
               <NavLink
                 key={id}
                 id={id}
