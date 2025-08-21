@@ -80,15 +80,16 @@ const ProjectSection = () => {
                 <div className="w-px h-6 bg-gray-400 mx-4"></div>
                 <p className="text-center">{selectedProjectDetail.teamInfo}</p>
                 </div>
-                {selectedProjectDetail.image && (
-                  <img
-                    src={selectedProjectDetail.image}
-                    alt={selectedProjectDetail.title}
-                    className="rounded-lg w-[700px] h-[400px] mx-auto"
-                  />
-                )}
-                <div className="flex flex-col items-center mt-4">
-                <p className="mb-4 text-center">{selectedProjectDetail.description}</p>
+                    {selectedProjectDetail.image && (
+                    <img
+                        src={selectedProjectDetail.image}
+                        alt={selectedProjectDetail.title}
+                        className="rounded-lg w-[700px] h-[400px] mx-auto"
+                    />
+                    )}
+                <div className="flex flex-col items-center mt-8">
+                <p className="mb-4 text-center w-[700px] whitespace-pre-line">
+                    {selectedProjectDetail.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {selectedProjectDetail.techStack.map((tech, i) => (
                     <span
@@ -99,9 +100,40 @@ const ProjectSection = () => {
                     </span>
                   ))}
                 </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {selectedProjectDetail.links.map((link, i) => (
+                        <a
+                            key={i}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-3 py-2 bg-[#BDD0B6] rounded-lg hover:bg-gray-200 transition"
+                        >
+                            <img src={link.icon} alt={link.label} className="w-5 h-5" />
+                            <span className="text-sm font-medium">{link.label}</span>
+                        </a>
+                    ))}
+                </div>
                 <div className="w-[700px] h-px bg-gray-300 my-4"></div>
 
                 <div className="flex flex-col w-[700px] mx-auto mt-4">
+                {selectedProjectDetail.url && (
+                    <div className="space-y-2 mb-4">
+                        <p className="mb-2 font-semibold text-xl">배포 링크</p>
+                        <div>
+                        <a
+                            href={selectedProjectDetail.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:text-blue-700"
+                        >
+                            {selectedProjectDetail.url}
+                        </a>
+                        </div>
+                    </div>
+                )}
+
                     <p className="mb-2 font-semibold text-xl">주요 기능</p>
                     <ul className="list-disc pl-6 mb-4">
                         {selectedProjectDetail.features.map((feat, i) => (
@@ -109,20 +141,19 @@ const ProjectSection = () => {
                         ))}
                     </ul>
 
-                    <p className="mb-2 font-semibold text-xl">기여 내용</p>
+                    <p className="mb-2 font-semibold text-xl">작업 기여도</p>
                     <div className="space-y-2 mb-4">
                         {selectedProjectDetail.contributions.map((contrib, i) => (
-                            <div>
-                                <div
-                                    key={i}
-                                    className="bg-gray-100 px-4 py-2 rounded-md text-gray-800 font-medium"
-                                    >
-                                    <p>{contrib.title}</p>
+                            <div key={i}>
+                                <div className="bg-gray-100 px-4 py-2 mb-4 rounded-md font-semibold text-gray-800 text-medium">
+                                <p>{contrib.title}</p>
                                 </div>
                                 <div>
-                                    <ul className="text-gray-600 text-sm mt-1 list-disc pl-5">
-                                        <li>{contrib.description}</li>
-                                    </ul>     
+                                <ul className="text-gray-600 text-medium mt-1 mb-6 list-disc pl-5">
+                                    {Array.isArray(contrib.description) && contrib.description.map((desc, j) => (
+                                    <li key={j}>{desc}</li>
+                                    ))}
+                                </ul>
                                 </div>
                             </div>
                         ))}
@@ -134,14 +165,19 @@ const ProjectSection = () => {
                             <div>
                                 <div
                                     key={i}
-                                    className="bg-gray-100 px-4 py-2 rounded-md text-gray-800 font-medium"
+                                    className="bg-gray-100 px-4 py-2 mb-4 rounded-md font-semibold text-gray-800 font-medium"
                                     >
                                     <p>{trouble.title}</p>
                                 </div>
                                 <div>
-                                    <ul className="text-gray-600 text-sm mt-1 list-disc pl-5">
-                                        <li>{trouble.description}</li>
-                                    </ul>     
+                                <ul className="text-gray-600 text-medium mt-1 list-disc pl-5">
+                                    {trouble.description.map((desc, i) => (
+                                        <li key={i}>
+                                        <span className="font-bold">{desc.startsWith("[문제]") ? "[문제]: " : desc.startsWith("[해결]") ? "[해결]: " : ""}</span>
+                                        {desc.replace(/\[문제\]|\[해결\]/g, "")}
+                                        </li>
+                                    ))}
+                                    </ul>
                                 </div>
                             </div>
                         ))}
