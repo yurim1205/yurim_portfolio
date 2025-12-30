@@ -20,10 +20,6 @@ export const projectData = [
         image: projectImg4,
         imageWebp: projectImg4,
         description: `도서 서비스`,
-        problem: `팀 프로젝트이기에 협업 과정이 흥미로웠습니다.
-
-        프론트엔드와 백엔드 간의 협업 과정에서 소통의 중요성을 배웠습니다.
-        `,
         techStack: [css, HTML, JS, React, Tailwind, Vite],
         date: '2025.5 ~ 2025.7',
         url: 'https://yurim-portfolio-one.vercel.app/',
@@ -38,10 +34,6 @@ export const projectData = [
         image: projectImg3,
         imageWebp: projectImg3,
         description: `Ai 기반 실험실 안전 보조 서비스`,
-        problem: `팀 프로젝트이기에 협업 과정이 흥미로웠습니다.
-
-        프론트엔드와 백엔드 간의 협업 과정에서 소통의 중요성을 배웠습니다.
-        `,
         techStack: [css, HTML, JS, React, Tailwind, Vite],
         date: '2025.5 ~ 2025.7',
         url: 'https://yurim-portfolio-one.vercel.app/',
@@ -58,12 +50,6 @@ export const projectData = [
         description: `포트폴리오를 위해 제작한 웹사이트
 
         `,
-        problem: `개인 프로젝트이기에 디자인부터 컴포넌트 세분화까지 혼자 기획하는 과정이 흥미로웠습니다.
-
-        유지보수하기 편리하게 컴포넌트를 구현하려 노력했으며, 렌더링에 대해 고민하게 된 경험이었습니다.
-
-        추후 TypeScript와 Next.js으로 마이그레이션 할 계획입니다.
-        `,
         techStack: [css, HTML, JS, React, Tailwind, Vite],
         date: '2025.3.6 ~ 2025.4.1',
         url: 'https://yurim-portfolio-one.vercel.app/',
@@ -78,10 +64,6 @@ export const projectData = [
         image: projectImg2,
         imageWebp: projectImg2,
         description: `여행 일정을 계획하고, 여행 기록을 공유하는 서비스
-        `,
-        problem: `처음 진행해본 리액트 프로젝트라 컴포넌트 세분화에 어려움을 느꼈습니다.
-
-        기간 내 좋은 프로젝트를 완성하기 위해 기획 단계가 중요하다는 것과, 협업 시 프론트엔드-백엔드와의 의사소통 중요성을 배우게 되었습니다.
         `,
         techStack: [css, HTML, JS, React, Vite, StyledComponents, TS, NestJS],
         date: '2024.4.1 ~ 2024.4.19',

@@ -11,69 +11,70 @@ export const modalData = [
         title: '[Pageone]',
         period: '2025.8 ~ ',
         teamInfo: '개인 프로젝트',
-        summary: 'Ai 기반 실험실 안전 보조 서비스',
-        description: ``,
-        features: [
-            '실험별 매뉴얼 등록 및 등록된 매뉴얼 분석',
-            '실험 위험도 분석 및 위험 요소 사전 브리핑',
-            '실시간 채팅을 통한 실험 로그 저장',
-            '채팅 로그 기반 실험 레포트 생성',
+        summary: '',
+        description: [
+            `사용자가 책을 검색하고, 개인 책장에 스크랩하며 독서 취향 및 기록을 관리할 수 있는 책 기반 기록·추천 서비스입니다.`,
+            `SSR 환경에서의 인증 이슈, 검색 조건 변경 시 데이터 일관성 문제, 외부 API 응답 지연 및 중복 요청 문제 등 실제 서비스 환경에서 발생할 수 있는 문제를 직접 겪고 해결하는 것을 목표로 개발했습니다.`,
         ],
-        techStack: ['React', 'JavaScript', 'Justand', 'Tailwind CSS', 'MySQL'],
+        features: ['도서 검색 및 개인 책장 관리'],
+        techStack: [
+            'Next.js',
+            'TypeScript',
+            'Justand',
+            'Tailwind CSS',
+            'Supabase',
+        ],
         contributions: [
             {
-                title: '로그인, 회원가입 기능 구현',
+                title: '도서 검색 및 개인 책장 페이지 관리',
                 description: [
-                    'Zustand를 활용하여 사용자 인증 상태를 전역에서 관리',
-                    'JWT 및 리프레시 토큰을 세션에 저장하여 인증 흐름 유지',
-                    '필요할 때만 Zustand에서 인증 상태를 불러와 불필요한 렌더링 최소화',
-                    'Zod를 활용한 회원가입/로그인 입력값 유효성 검사로 안정성 확보',
-                    '유효성 검사 실패 시 에러 메시지 제공으로 UX 개선',
+                    '카카오 도서 검색 API를 연동하여 도서 검색 결과를 fetch 및 렌더링',
+                    'Supabase(PostgreSQL) 기반으로 개인 책장 스크랩/삭제 CRUD 기능 구현',
+                    '이미지 로딩 실패 시 fallback UI 제공, 로딩·에러 상태 분리 처리로 UX 안정성 강화',
                 ],
             },
             {
-                title: '실험 중 채팅 기능 구현',
+                title: '회원 인증 및 세션 관리',
                 description: [
-                    'WebSocket 기반 텍스트 채팅 기능 구현',
-                    '음성 채팅 API 연동을 통해 실험 참여자 간 실시간 소통 지원',
-                    '채팅 로그 저장 및 조회 기능을 추가하여 실험 기록 관리 가능',
-                    '타이핑 기능 구현을 통해 실시간으로 채팅하는 듯한 UX 제공',
+                    'Supabase Auth를 활용해 회원가입 기능 구현',
+                    'SSR 환경에서 Supabase Auth가 정상 동작하지 않는 문제를 디버깅하여 세션 유지 로직을 정교화하여 초기 렌더링 시 인증 상태 불안정 문제 해결 - 인증 로직을 CSR 기반 구조로 분리',
                 ],
             },
             {
-                title: 'UI/UX 디자인 설계',
+                title: '전역 상태 관리 구조 개선',
                 description: [
-                    'Figma를 활용해 로그인, 회원가입 페이지 레이아웃 및 UX 흐름 설계',
-                    '메인 페이지 디자인 설계',
-                ],
-            },
-            {
-                title: '프론트엔드 환경 세팅 및 구조 설계',
-                description: [
-                    'React + Vite 기반 프로젝트 초기 환경 구성',
-                    '컴포넌트 구조 및 상태 관리 흐름(Zustand) 설계',
-                    '재사용 가능한 UI 컴포넌트 설계 및 스타일링 구조(Tailwind CSS) 적용',
-                    '코드 유지보수성과 확장성을 고려한 폴더 구조 설계',
+                    'Zustand를 사용해 검색 조건, 책장 상태, 사용자 정보를 중앙 집중식으로 관리',
+                    'React Query를 활용해 API 응답 캐싱 및 재사용 구조 설계',
+                    '불필요한 중복 fetch를 제거하고, 상태 변경 시 예측 가능한 데이터 흐름 유지',
                 ],
             },
         ],
         troubleShooting: [
             {
-                title: '프론트와 백엔드 API 연동 시 설계 문제',
+                title: 'SSR 환경에서 인증이 동작하지 않던 문제',
                 description: [
-                    '[문제] 실험 중간 저장된 실험을 이어하기 위해 실험별 id가 필요했는데 백엔드에서 해당 api가 구현되어 있지 않았습니다.',
-                    '[해결] 팀원들과 논의한 결과, 해당 api의 구현 필요성이 있다는 결론을 내렸습니다. 이에 대해 백엔드 팀에 실험을 이어할 수 있는 api 구현을 요청했고, api를 연동하여 해당 기능 구현을 완료했습니다.',
+                    '[문제] Next.js SSR 환경에서 Supabase Auth 세션이 정상적으로 유지되지 않아 인증 상태에 따라 오류가 발생',
+                    '[해결] 인증 로직을 CSR 기반으로 분리함, 클라이언트에서 세션을 명확히 관리하도록 구조 변경',
+                    '[결과]: 초기 렌더링 안정성 확보, 인증 관련 버그 감소 및 코드 구조 명확화',
+                ],
+            },
+            {
+                title: '외부 API 응답 지연 및 중복 요청 문제',
+                description: [
+                    '[문제] 카카오 도서 API 호출 시 응답 지연 및 중복 fetch 발생',
+                    '[해결] React Query의 캐싱 전략을 활용해 동일 조건 요청 재사용, 불필요한 API 호출 최소화',
+                    '[결과] 네트워크 요청 감소, 검색 응답 체감 속도 개선',
                 ],
             },
         ],
         links: [
             {
                 label: 'GitHub',
-                url: 'https://github.com/yurim1205/labguard_front',
+                url: 'https://github.com/yurim1205/pageone/tree/main/pageone',
                 icon: Github,
             },
         ],
-        image: project1,
+        image: project4,
     },
 
     {
