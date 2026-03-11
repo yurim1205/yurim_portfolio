@@ -10,6 +10,9 @@ import PostmanIcon from "../assets/stackIcon/Postman.svg";
 import FigmaIcon from "../assets/stackIcon/Figma.svg";
 import GitIcon from "../assets/stackIcon/Git.svg";
 import TailwindIcon from "../assets/stackIcon/tailwind-css.png";
+import FastapiIcon from "../assets/stackIcon/Fastapi.svg";
+import MysqlIcon from "../assets/stackIcon/mysql.svg";
+import SupabaseIcon from "../assets/stackIcon/supabase.svg";
 
 export const FrontendIcons = [
     { id: 1, src: HtmlIcon, alt: "Html", title: "HTML5", description: "웹 표준을 준수하며, 반응형 웹을 구축하여 최적화된 사용자 경험을 제공합니다." },
@@ -27,4 +30,10 @@ export const ToolsIcons = [
     { id: 9, src: PostmanIcon, alt: "Postman Icon", title: "Postman", description: "REST API 테스트 및 공유 시 사용하는 툴입니다." },
     { id: 10, src: FigmaIcon, alt: "Figma Icon", title: "Figma", description: "UI/UX 디자인 및 프로토타입을 제작할 수 있습니다." },
     { id: 11, src: GitIcon, alt: "Git Icon", title: "Git", description: "Github와 함께 사용하며, 로컬 & 원격 저장소를 이용한 버전 관리 및 협업이 가능합니다." },
+];
+
+export const BackendIcons = [
+    { id: 12, src: FastapiIcon, alt: "Fastapi Icon", title: "FastAPI", description: "Python 기반의 REST API 서버를 구축하고 백엔드 개발 경험이 있습니다." },
+    { id: 13, src: MysqlIcon, alt: "Mysql Icon", title: "MySQL", description: "MySQL를 사용하여 테이블 및 쿼리 설계를 할 수 있습니다." },
+    { id: 14, src: SupabaseIcon, alt: "Supabase Icon", title: "Supabase", description: "인증 및 실시간 데이터베이스 구성 등 백엔드 기능을 구현할 수 있습니다." },
 ];
