@@ -8,7 +8,7 @@ function HandIcon() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: 'spring', visualDuration: 0.6, bounce: 0.6 }}
         >
-            <div className="origin-bottom-right animate-wiggle text-9xl">👋🏻</div>
+            <div className="origin-bottom-right animate-wiggle text-8xl">👋🏻</div>
         </motion.div>
     );
 }

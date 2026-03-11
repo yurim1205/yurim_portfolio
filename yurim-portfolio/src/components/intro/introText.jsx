@@ -3,14 +3,12 @@ import React from "react";
 function IntroText() {
     return (
         <h1 className="text-center text-3xl font-semibold foldable:text-3xl tablet:text-end tablet:text-4xl [&>p]:leading-snug">
-            <p>안녕하세요!</p>
             <p className="text-text">
                 <span className="inline-block font-bold">
-                    사용자를 위해
+                    데이터 흐름과 사용자 경험을 고려해
                 </span>
                 <span className="inline-block">
-                    <span className="font-bold">&nbsp;편리한 인터페이스를 구현</span>
-                    하는
+                    <span className="font-bold">&nbsp;React 기반 웹서비스를 구현하는</span>
                 </span>
             </p>
             <p>
