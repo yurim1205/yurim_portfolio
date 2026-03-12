@@ -1,15 +1,16 @@
-import project1 from '../assets/projectImg/labguard.webp';
-import project2 from '../assets/projectImg/portfolio.webp';
-import project3 from '../assets/projectImg/tripTeller.webp';
-import project4 from '../assets/projectImg/pageone.webp';
+import labguardImg from '../assets/projectImg/labguard.webp';
+import portfolioImg from '../assets/projectImg/portfolio.webp';
+import tripTellerImg from '../assets/projectImg/tripTeller.webp';
+import pageoneImg from '../assets/projectImg/pageone.webp';
+import influencerFinderImg from '../assets/projectImg/influencerFinder.webp';
 import Github from '../assets/projectIcon/github.png';
 import Velog from '../assets/projectIcon/velog.png';
 
 export const modalData = [
     {
         id: 1,
-        title: '[Pageone]',
-        period: '2025.8 ~ ',
+        title: '[Influencer Finder]',
+        period: '2026.1 ~ 진행 중',
         teamInfo: '개인 프로젝트',
         summary: '',
         description: [
@@ -23,6 +24,7 @@ export const modalData = [
             'Justand',
             'Tailwind CSS',
             'Supabase',
+            'React Query',  
         ],
         contributions: [
             {
@@ -74,11 +76,82 @@ export const modalData = [
                 icon: Github,
             },
         ],
-        image: project4,
+        image: influencerFinderImg,
+    },
+    {
+        id: 2,
+        title: '[Pageone]',
+        period: '2025.8 ~ 2025.8',
+        teamInfo: '개인 프로젝트',
+        summary: '',
+        description: [
+            `사용자가 책을 검색하고, 개인 책장에 스크랩하며 독서 취향 및 기록을 관리할 수 있는 책 기반 기록·추천 서비스입니다.`,
+            `SSR 환경에서의 인증 이슈, 검색 조건 변경 시 데이터 일관성 문제, 외부 API 응답 지연 및 중복 요청 문제 등 실제 서비스 환경에서 발생할 수 있는 문제를 직접 겪고 해결하는 것을 목표로 개발했습니다.`,
+        ],
+        features: ['도서 검색 및 개인 책장 관리'],
+        techStack: [
+            'Next.js',
+            'TypeScript',
+            'Justand',
+            'Tailwind CSS',
+            'Supabase',
+            'React Query',  
+        ],
+        contributions: [
+            {
+                title: '도서 검색 및 개인 책장 페이지 관리',
+                description: [
+                    '카카오 도서 검색 API를 연동하여 도서 검색 결과를 fetch 및 렌더링',
+                    'Supabase(PostgreSQL) 기반으로 개인 책장 스크랩/삭제 CRUD 기능 구현',
+                    '이미지 로딩 실패 시 fallback UI 제공, 로딩·에러 상태 분리 처리로 UX 안정성 강화',
+                ],
+            },
+            {
+                title: '회원 인증 및 세션 관리',
+                description: [
+                    'Supabase Auth를 활용해 회원가입 기능 구현',
+                    'SSR 환경에서 Supabase Auth가 정상 동작하지 않는 문제를 디버깅하여 세션 유지 로직을 정교화하여 초기 렌더링 시 인증 상태 불안정 문제 해결 - 인증 로직을 CSR 기반 구조로 분리',
+                ],
+            },
+            {
+                title: '전역 상태 관리 구조 개선',
+                description: [
+                    'Zustand를 사용해 검색 조건, 책장 상태, 사용자 정보를 중앙 집중식으로 관리',
+                    'React Query를 활용해 API 응답 캐싱 및 재사용 구조 설계',
+                    '불필요한 중복 fetch를 제거하고, 상태 변경 시 예측 가능한 데이터 흐름 유지',
+                ],
+            },
+        ],
+        troubleShooting: [
+            {
+                title: 'SSR 환경에서 인증이 동작하지 않던 문제',
+                description: [
+                    '[문제] Next.js SSR 환경에서 Supabase Auth 세션이 정상적으로 유지되지 않아 인증 상태에 따라 오류가 발생',
+                    '[해결] 인증 로직을 CSR 기반으로 분리함, 클라이언트에서 세션을 명확히 관리하도록 구조 변경',
+                    '[결과]: 초기 렌더링 안정성 확보, 인증 관련 버그 감소 및 코드 구조 명확화',
+                ],
+            },
+            {
+                title: '외부 API 응답 지연 및 중복 요청 문제',
+                description: [
+                    '[문제] 카카오 도서 API 호출 시 응답 지연 및 중복 fetch 발생',
+                    '[해결] React Query의 캐싱 전략을 활용해 동일 조건 요청 재사용, 불필요한 API 호출 최소화',
+                    '[결과] 네트워크 요청 감소, 검색 응답 체감 속도 개선',
+                ],
+            },
+        ],
+        links: [
+            {
+                label: 'GitHub',
+                url: 'https://github.com/yurim1205/pageone/tree/main/pageone',
+                icon: Github,
+            },
+        ],
+        image: pageoneImg,
     },
 
     {
-        id: 2,
+        id: 3,
         title: '[랩 가드]',
         period: '2025.5 ~ 2025.7',
         teamInfo: '팀 프로젝트 (기획자 1명, 프론트엔드 1명, 백엔드 3명)',
@@ -144,11 +217,11 @@ export const modalData = [
                 icon: Github,
             },
         ],
-        image: project1,
+        image: labguardImg,
     },
 
     {
-        id: 3,
+        id: 4,
         title: '[포트폴리오 웹사이트]',
         period: '2025.3',
         teamInfo: '개인 프로젝트',
@@ -209,11 +282,11 @@ export const modalData = [
             },
         ],
         url: 'https://yurim-portfolio-one.vercel.app/',
-        image: project2,
+        image: portfolioImg,
     },
 
     {
-        id: 4,
+        id: 5,
         title: '[트립 텔러]',
         period: '2024.4 ~ 2024.6',
         teamInfo: '팀 프로젝트 (프론트엔드 4명, 백엔드 2명)',
@@ -271,6 +344,6 @@ export const modalData = [
             },
         ],
         url: 'https://www.trip-teller.com/',
-        image: project3,
+        image: tripTellerImg,
     },
 ];

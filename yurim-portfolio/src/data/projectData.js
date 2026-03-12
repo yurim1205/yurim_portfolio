@@ -2,6 +2,7 @@ import projectImg1 from '../assets/projectImg/portfolio.webp';
 import projectImg2 from '../assets/projectImg/tripTeller.webp';
 import projectImg3 from '../assets/projectImg/labguard.webp';
 import projectImg4 from '../assets/projectImg/pageone.webp';
+import projectImg5 from '../assets/projectImg/influencerFinder.webp';
 import css from '../assets/stackIcon/CSS.svg';
 import HTML from '../assets/stackIcon/HTML.svg';
 import JS from '../assets/stackIcon/JavaScript.svg';
@@ -15,13 +16,13 @@ import NestJS from '../assets/stackIcon/NestJS.svg';
 export const projectData = [
     {
         id: 1,
-        title: 'Pageone',
+        title: 'Influencer Finder',
         semiTitle: '개인 프로젝트',
-        image: projectImg4,
-        imageWebp: projectImg4,
-        description: `도서 서비스`,
+        image: projectImg5,
+        imageWebp: projectImg5,
+        description: `마케터를 위한 인플루언서 리스트업 서비스`,
         techStack: [css, HTML, JS, React, Tailwind, Vite],
-        date: '2025.5 ~ 2025.7',
+        date: '2026.1 ~ 진행 중',
         url: 'https://yurim-portfolio-one.vercel.app/',
         projectGithub: 'https://github.com/yurim1205/yurim_portfolio',
         velogUrl:
@@ -29,6 +30,20 @@ export const projectData = [
     },
     {
         id: 2,
+        title: 'Pageone',
+        semiTitle: '개인 프로젝트',
+        image: projectImg4,
+        imageWebp: projectImg4,
+        description: `도서 서비스`,
+        techStack: [css, HTML, JS, React, Tailwind, Vite],
+        date: '2025.8 ~ 2025.8',
+        url: 'https://yurim-portfolio-one.vercel.app/',
+        projectGithub: 'https://github.com/yurim1205/yurim_portfolio',
+        velogUrl:
+            'https://velog.io/write?id=06643756-1951-4092-a47a-7e9fe7dde677',
+    },
+    {
+        id: 3,
         title: 'Lab Guard',
         semiTitle: '팀 프로젝트',
         image: projectImg3,
@@ -42,7 +57,7 @@ export const projectData = [
             'https://velog.io/write?id=06643756-1951-4092-a47a-7e9fe7dde677',
     },
     {
-        id: 3,
+        id: 4,
         title: '포트폴리오 사이트',
         semiTitle: '개인 프로젝트',
         image: projectImg1,
@@ -58,7 +73,7 @@ export const projectData = [
             'https://velog.io/write?id=06643756-1951-4092-a47a-7e9fe7dde677',
     },
     {
-        id: 4,
+        id: 5,
         title: 'TripTeller',
         semiTitle: '팀 프로젝트 (6인)',
         image: projectImg2,
