@@ -184,20 +184,11 @@ const ProjectSection = () => {
                                                                     contrib.description
                                                                 ) &&
                                                                     contrib.description.map(
-                                                                        (
-                                                                            desc,
-                                                                            j
-                                                                        ) => (
-                                                                            <li
-                                                                                key={
-                                                                                    j
-                                                                                }
-                                                                            >
-                                                                                {
-                                                                                    desc
-                                                                                }
-                                                                            </li>
-                                                                        )
+                                                                         (desc, i) => (
+                                                                    <li key={i}>
+                                                                        {desc}
+                                                                    </li>
+                                                                )
                                                                     )}
                                                             </ul>
                                                         </div>
@@ -209,12 +200,11 @@ const ProjectSection = () => {
                                         <p className="mb-2 font-semibold text-xl">
                                             트러블 슈팅
                                         </p>
-                                        <div className="space-y-2 mb-4">
+                                        <div className="space-y-8 mb-4">
                                             {selectedProjectDetail.troubleShooting.map(
                                                 (trouble, i) => (
-                                                    <div>
+                                                    <div key={i}>
                                                         <div
-                                                            key={i}
                                                             className="bg-gray-100 px-4 py-2 mb-4 rounded-md font-semibold text-gray-800 font-medium"
                                                         >
                                                             <p>
@@ -224,26 +214,11 @@ const ProjectSection = () => {
                                                         <div>
                                                             <ul className="text-gray-600 text-medium mt-1 list-disc pl-5">
                                                                 {trouble.description.map(
-                                                                    (
-                                                                        desc,
-                                                                        i
-                                                                    ) => (
-                                                                        <li
-                                                                            key={
-                                                                                i
-                                                                            }
-                                                                        >
-                                                                            <span className="font-bold">
-                                                                                {desc.startsWith(
-                                                                                    '[문제]'
-                                                                                )
-                                                                                    ? '[문제]: '
-                                                                                    : desc.startsWith(
-                                                                                            '[해결]'
-                                                                                        )
-                                                                                      ? '[해결]: '
-                                                                                      : ''}
-                                                                            </span>
+                                                                    ( desc, i) => (
+                                                                    <li key={i}>
+                                                                        <span className="font-bold">
+                                                                            {desc.startsWith('[문제]') ? '[문제]: ' : desc.startsWith('[해결]') ? '[해결]: ' : ''}
+                                                                        </span>
                                                                             {desc.replace(
                                                                                 /\[문제\]|\[해결\]/g,
                                                                                 ''

@@ -14,65 +14,60 @@ export const modalData = [
         teamInfo: '개인 프로젝트',
         summary: '',
         description: [
-            `사용자가 책을 검색하고, 개인 책장에 스크랩하며 독서 취향 및 기록을 관리할 수 있는 책 기반 기록·추천 서비스입니다.`,
-            `SSR 환경에서의 인증 이슈, 검색 조건 변경 시 데이터 일관성 문제, 외부 API 응답 지연 및 중복 요청 문제 등 실제 서비스 환경에서 발생할 수 있는 문제를 직접 겪고 해결하는 것을 목표로 개발했습니다.`,
+            `키워드 기반으로 유튜브 채널을 검색하고, 구독자 수와 영상의 평균 조회수를 쉽게 확인할 수 있는 서비스입니다.`,
+            ` YouTube Data API를 활용해 채널 검색과 영상 제목 검색을 병렬로 처리하는 하이브리드 검색 구조를 직접 설계하고 구현했습니다.`,
         ],
-        features: ['도서 검색 및 개인 책장 관리'],
+        features: [
+            '키워드 기반 유튜브 채널 검색',
+            '채널 상세 정보 조회'
+        ],
         techStack: [
-            'Next.js',
-            'TypeScript',
-            'Justand',
-            'Tailwind CSS',
-            'Supabase',
-            'React Query',  
-        ],
+            'Next.js','TypeScript','Tailwind CSS','YouTube Data API'],
         contributions: [
             {
-                title: '도서 검색 및 개인 책장 페이지 관리',
+                title: '하이브리드 검색 구조 설계 및 구현',
                 description: [
-                    '카카오 도서 검색 API를 연동하여 도서 검색 결과를 fetch 및 렌더링',
-                    'Supabase(PostgreSQL) 기반으로 개인 책장 스크랩/삭제 CRUD 기능 구현',
-                    '이미지 로딩 실패 시 fallback UI 제공, 로딩·에러 상태 분리 처리로 UX 안정성 강화',
+                    'YouTube Data API를 활용해 채널명 검색과 영상 제목 검색을 병렬로 처리하는 searchChannelsHybrid 함수 설계',
+                    'Map 자료구조를 활용해 중복 채널을 제거하고 최대 10개 결과 반환',
+                    '검색 결과를 Map으로 캐싱하여 동일 키워드 재검색 시 API 호출 없이 즉시 반환',
                 ],
             },
             {
-                title: '회원 인증 및 세션 관리',
+                title: '채널 상세 페이지 구현',
                 description: [
-                    'Supabase Auth를 활용해 회원가입 기능 구현',
-                    'SSR 환경에서 Supabase Auth가 정상 동작하지 않는 문제를 디버깅하여 세션 유지 로직을 정교화하여 초기 렌더링 시 인증 상태 불안정 문제 해결 - 인증 로직을 CSR 기반 구조로 분리',
+                    'Next.js 동적 라우팅을 활용해 채널별 상세 페이지 구현',
+                    '채널 썸네일, 구독자 수, 평균 조회수, 채널 설명 등 주요 정보 렌더링',
                 ],
             },
             {
-                title: '전역 상태 관리 구조 개선',
+                title: '검색 UX 개선',
                 description: [
-                    'Zustand를 사용해 검색 조건, 책장 상태, 사용자 정보를 중앙 집중식으로 관리',
-                    'React Query를 활용해 API 응답 캐싱 및 재사용 구조 설계',
-                    '불필요한 중복 fetch를 제거하고, 상태 변경 시 예측 가능한 데이터 흐름 유지',
+                    '추천 키워드 버튼으로 빠른 검색 진입 제공',
+                    'react-hot-toast를 활용한 빈 검색어 입력 시 에러 피드백 처리',
+                    '검색 중 로딩 상태와 결과 없음 상태 분리 처리',
                 ],
             },
         ],
         troubleShooting: [
             {
-                title: 'SSR 환경에서 인증이 동작하지 않던 문제',
+                title: 'YouTube api 키 제한으로 서버 컴포넌트에서 api 호출이 막히는 문제',
                 description: [
-                    '[문제] Next.js SSR 환경에서 Supabase Auth 세션이 정상적으로 유지되지 않아 인증 상태에 따라 오류가 발생',
-                    '[해결] 인증 로직을 CSR 기반으로 분리함, 클라이언트에서 세션을 명확히 관리하도록 구조 변경',
-                    '[결과]: 초기 렌더링 안정성 확보, 인증 관련 버그 감소 및 코드 구조 명확화',
+                    '[문제] 서버 컴포넌트는 referer가 비어있어 api 키 http 제한에 의해 차단됨',
+                    '[해결] 상세 페이지를 클라이언트 컴포넌트로 변경하여 해결',
                 ],
             },
             {
-                title: '외부 API 응답 지연 및 중복 요청 문제',
+                title: '상세 페이지에서 뒤로가기 시 검색 결과가 사라지는 문제',
                 description: [
-                    '[문제] 카카오 도서 API 호출 시 응답 지연 및 중복 fetch 발생',
-                    '[해결] React Query의 캐싱 전략을 활용해 동일 조건 요청 재사용, 불필요한 API 호출 최소화',
-                    '[결과] 네트워크 요청 감소, 검색 응답 체감 속도 개선',
+                    '[문제] 캐시를 컴포넌트 내부에 선언해 재마운트 시 캐시가 초기화되어 무한 로딩 발생',
+                    '[해결] searchCache를 컴포넌트 외부 전역 변수로 이동해 재렌더링과 무관하게 캐시 유지',
                 ],
             },
         ],
         links: [
             {
                 label: 'GitHub',
-                url: 'https://github.com/yurim1205/pageone/tree/main/pageone',
+                url: 'https://github.com/yurim1205/influencer-finder',
                 icon: Github,
             },
         ],
