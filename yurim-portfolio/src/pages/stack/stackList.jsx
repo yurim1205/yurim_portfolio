@@ -1,5 +1,5 @@
 import React from "react";
-import { FrontendIcons, ToolsIcons } from "../../data/stackData";
+import { FrontendIcons, BackendIcons, ToolsIcons } from "../../data/stackData";
 
 // StackSection: title과 icons를 props로 받아서 각 섹션을 렌더링 함
 
@@ -49,6 +49,10 @@ const StackSection = () => {
             </p>
 
             <Stack title="Frontend" icons={FrontendIcons} />
+            <br></br>
+            <br></br>
+            <br></br>
+            <Stack title="Backend" icons={BackendIcons} />
             <br></br>
             <br></br>
             <br></br>

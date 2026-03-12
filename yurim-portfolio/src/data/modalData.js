@@ -1,15 +1,82 @@
-import project1 from '../assets/projectImg/labguard.webp';
-import project2 from '../assets/projectImg/portfolio.webp';
-import project3 from '../assets/projectImg/tripTeller.webp';
-import project4 from '../assets/projectImg/pageone.webp';
+import labguardImg from '../assets/projectImg/labguard.webp';
+import portfolioImg from '../assets/projectImg/portfolio.webp';
+import tripTellerImg from '../assets/projectImg/tripTeller.webp';
+import pageoneImg from '../assets/projectImg/pageone.webp';
+import influencerFinderImg from '../assets/projectImg/influencerFinder.webp';
 import Github from '../assets/projectIcon/github.png';
 import Velog from '../assets/projectIcon/velog.png';
 
 export const modalData = [
     {
         id: 1,
+        title: '[Influencer Finder]',
+        period: '2026.1 ~ 진행 중',
+        teamInfo: '개인 프로젝트',
+        summary: '',
+        description: [
+            `키워드 기반으로 유튜브 채널을 검색하고, 구독자 수와 영상의 평균 조회수를 쉽게 확인할 수 있는 서비스입니다.`,
+            ` YouTube Data API를 활용해 채널 검색과 영상 제목 검색을 병렬로 처리하는 하이브리드 검색 구조를 직접 설계하고 구현했습니다.`,
+        ],
+        features: [
+            '키워드 기반 유튜브 채널 검색',
+            '채널 상세 정보 조회'
+        ],
+        techStack: [
+            'Next.js','TypeScript','Tailwind CSS','YouTube Data API'],
+        contributions: [
+            {
+                title: '하이브리드 검색 구조 설계 및 구현',
+                description: [
+                    'YouTube Data API를 활용해 채널명 검색과 영상 제목 검색을 병렬로 처리하는 searchChannelsHybrid 함수 설계',
+                    'Map 자료구조를 활용해 중복 채널을 제거하고 최대 10개 결과 반환',
+                    '검색 결과를 Map으로 캐싱하여 동일 키워드 재검색 시 API 호출 없이 즉시 반환',
+                ],
+            },
+            {
+                title: '채널 상세 페이지 구현',
+                description: [
+                    'Next.js 동적 라우팅을 활용해 채널별 상세 페이지 구현',
+                    '채널 썸네일, 구독자 수, 평균 조회수, 채널 설명 등 주요 정보 렌더링',
+                ],
+            },
+            {
+                title: '검색 UX 개선',
+                description: [
+                    '추천 키워드 버튼으로 빠른 검색 진입 제공',
+                    'react-hot-toast를 활용한 빈 검색어 입력 시 에러 피드백 처리',
+                    '검색 중 로딩 상태와 결과 없음 상태 분리 처리',
+                ],
+            },
+        ],
+        troubleShooting: [
+            {
+                title: 'YouTube api 키 제한으로 서버 컴포넌트에서 api 호출이 막히는 문제',
+                description: [
+                    '[문제] 서버 컴포넌트는 referer가 비어있어 api 키 http 제한에 의해 차단됨',
+                    '[해결] 상세 페이지를 클라이언트 컴포넌트로 변경하여 해결',
+                ],
+            },
+            {
+                title: '상세 페이지에서 뒤로가기 시 검색 결과가 사라지는 문제',
+                description: [
+                    '[문제] 캐시를 컴포넌트 내부에 선언해 재마운트 시 캐시가 초기화되어 무한 로딩 발생',
+                    '[해결] searchCache를 컴포넌트 외부 전역 변수로 이동해 재렌더링과 무관하게 캐시 유지',
+                ],
+            },
+        ],
+        links: [
+            {
+                label: 'GitHub',
+                url: 'https://github.com/yurim1205/influencer-finder',
+                icon: Github,
+            },
+        ],
+        image: influencerFinderImg,
+    },
+    {
+        id: 2,
         title: '[Pageone]',
-        period: '2025.8 ~ ',
+        period: '2025.8 ~ 2025.8',
         teamInfo: '개인 프로젝트',
         summary: '',
         description: [
@@ -23,6 +90,7 @@ export const modalData = [
             'Justand',
             'Tailwind CSS',
             'Supabase',
+            'React Query',  
         ],
         contributions: [
             {
@@ -74,11 +142,11 @@ export const modalData = [
                 icon: Github,
             },
         ],
-        image: project4,
+        image: pageoneImg,
     },
 
     {
-        id: 2,
+        id: 3,
         title: '[랩 가드]',
         period: '2025.5 ~ 2025.7',
         teamInfo: '팀 프로젝트 (기획자 1명, 프론트엔드 1명, 백엔드 3명)',
@@ -144,11 +212,11 @@ export const modalData = [
                 icon: Github,
             },
         ],
-        image: project1,
+        image: labguardImg,
     },
 
     {
-        id: 3,
+        id: 4,
         title: '[포트폴리오 웹사이트]',
         period: '2025.3',
         teamInfo: '개인 프로젝트',
@@ -209,11 +277,11 @@ export const modalData = [
             },
         ],
         url: 'https://yurim-portfolio-one.vercel.app/',
-        image: project2,
+        image: portfolioImg,
     },
 
     {
-        id: 4,
+        id: 5,
         title: '[트립 텔러]',
         period: '2024.4 ~ 2024.6',
         teamInfo: '팀 프로젝트 (프론트엔드 4명, 백엔드 2명)',
@@ -271,6 +339,6 @@ export const modalData = [
             },
         ],
         url: 'https://www.trip-teller.com/',
-        image: project3,
+        image: tripTellerImg,
     },
 ];
