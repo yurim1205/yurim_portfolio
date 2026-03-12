@@ -12,7 +12,7 @@ import GitIcon from "../assets/stackIcon/Git.svg";
 import TailwindIcon from "../assets/stackIcon/tailwind-css.png";
 import FastapiIcon from "../assets/stackIcon/Fastapi.svg";
 import MysqlIcon from "../assets/stackIcon/mysql.svg";
-import SupabaseIcon from "../assets/stackIcon/supabase.svg";
+import SupabaseIcon from "../assets/stackIcon/Supabase.svg";
 
 export const FrontendIcons = [
     { id: 1, src: HtmlIcon, alt: "Html", title: "HTML5", description: "웹 표준을 준수하며, 반응형 웹을 구축하여 최적화된 사용자 경험을 제공합니다." },
