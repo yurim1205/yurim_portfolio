@@ -37,7 +37,7 @@ function ContactSection() {
                         </div>
                     </div>
                     <p className="flex-col items-center text-sm text-center mt-12">
-                        © 2025. Lee Yurim. All rights reserved.
+                        © 2026. Lee Yurim. All rights reserved.
                     </p>
                 </div>
             </section>

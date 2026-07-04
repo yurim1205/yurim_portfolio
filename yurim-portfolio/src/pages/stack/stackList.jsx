@@ -27,7 +27,7 @@ const Stack = ({ title, icons }) => (
                             className="w-[50px] h-[50px] object-contain"
                         />
 
-                        <div className="flex flex-col items-start w-[200px] h-[85px]">
+                        <div className="flex flex-col items-start w-[200px] min-h-[85px]">
                             <h4 className="text-lg font-bold text-white">{icon.title}</h4>
                             <p className="text-sm text-gray-300">{icon.description}</p>
                         </div>
