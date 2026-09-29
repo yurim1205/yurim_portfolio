@@ -1,56 +1,86 @@
-import React from "react";
-import CalenderIcon from "../../assets/aboutIcon/calendar.png";
-import PersonIcon from "../../assets/aboutIcon/person.png";
-import GraduationIcon from "../../assets/aboutIcon/graduation.png";
-import EmailIcon from "../../assets/aboutIcon/email.png";
+import React from 'react';
+import { GraduationCap, Users, Rocket, Mail } from 'lucide-react';
 
 // UI 컴포넌트는 상태 관리보다는 데이터를 받아 렌더링하는 역할이기 때문에 Observer 로직 필요 없음
 
 const AboutSection = () => {
   const infoItems = [
-    // 수정하기 편하게 아이콘 크기 따로 지정함
-    { id: 1, icon: PersonIcon, body: "이유림", size: "h-20 w-20" },
-    { id: 2, icon: CalenderIcon, body: "2000.12.05", size: "h-20 w-20" },
-    { id: 3, icon: GraduationIcon, body: "컴퓨터소프트웨어공학", size: "h-20 w-20" },
-    {
-      id: 4,
-      icon: EmailIcon,
-      body: (
-        <>
-          yuurriimm@gmail.com
-          <br />
-          eoulim3237@naver.com
-        </>
-      ),
-      size: "h-20 w-20"
+    { 
+      id: 1, 
+      label: "EDUCATION",
+      icon: <GraduationCap strokeWidth={0.5} />, 
+      title: "순천향대학교", 
+      description: "컴퓨터소프트웨어공학과 · 2024.2 졸업" 
+    },
+    { 
+      id: 2, 
+      label: "TEAM PROJECT",
+      icon: <Users strokeWidth={0.5} />,  
+      title: "팀 프로젝트 2회", 
+      description: "트립텔러, 랩가드에서 프론트엔드를 맡아 백엔드와 API를 협업하며 개발" 
+    },
+    { 
+      id: 3, 
+      label: "PERSONAL PROJECT",
+      icon: <Rocket strokeWidth={0.5} />,
+      title: "개인 프로젝트", 
+      description: "Pageone, 포트폴리오, Influencer Finder를 직접 설계하고 구현" 
+    },
+    { 
+      id: 4, 
+      label: "CONTACT",
+      icon: <Mail strokeWidth={0.5} />, 
+      title: "eoulim3237@naver.com", 
+      description: "GitHub · Velog" 
     },
   ];
+
+  const tags = ["FRONTEND", "UI/UX DESIGN", "REACT", "ARCHITECTURE"];
 
   return (
     <section
       id="about"
-      className="w-full min-h-screen mx-auto bg-[#FFEDD2] flex flex-col items-center justify-center px-4 py-32"
+      className="w-full mx-auto bg-[#FEFBF5] px-6 md:px-20 py-32"
     >
-      <div className="max-w-6xl w-full px-4 mb-32">
-        <p className="mb-24 text-[64px] sm:text-[48px] text-center font-thin font-abhaya decoration-[2px]">
-          ABOUT ME
-        </p>
 
-        <p className="md:text-3xl text-center max-w-4xl mx-auto leading-snug mt-5 text-main font-sans">
-          <span className="font-bold">주도적</span>으로 새로운 기술을 학습하는 것을 좋아하며, <br />
-          <span className="font-bold">UX를 우선시하며 개발하는</span> 프론트엔드 개발자로
-          <span className="font-bold"> 성장</span>하고 싶습니다.
-        </p>
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_2.5fr] gap-16">
+          
+    <div className="flex flex-col justify-between">
+          <p className="text-5xl text-[#294122] font-serif font-normal">ABOUT ME</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 pt-36">
-          {infoItems.map((item) => (
-            <div className="flex flex-col items-center" key={item.id}>
-              <img src={item.icon} alt={`${item.title} 아이콘`} className="mt-10 h-20 w-20" />
-              <p className="text-xl mt-8 text-main text-center">{item.body}</p>
-            </div>
-          ))}
+          <div className="flex flex-wrap gap-2 mt-16 md:mt-0">
+            {tags.map((tag, i) => (
+              <span
+                key={i}
+                className="px-4 py-2 border border-gray-300 rounded-full text-sm font-semibold"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 border-t border-gray-300">
+      {infoItems.map((item, index) => (
+        <div
+          key={item.id}
+          className={`
+            p-10
+            ${index % 2 === 0 ? 'md:border-r' : ''}
+            border-b border-gray-300
+          `}
+        >
+          <div className="h-16 w-16 text-main mb-6">
+            {React.cloneElement(item.icon, { className: "w-full h-full" })}
+          </div>
+          <p className="text-xs tracking-widest text-gray-400 mb-1">{item.label}</p>
+          <h3 className="text-2xl font-medium mb-2">{item.title}</h3>
+          <p className="text-gray-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+
+    </div>
     </section>
   );
 };
