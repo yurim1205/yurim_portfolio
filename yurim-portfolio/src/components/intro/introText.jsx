@@ -4,11 +4,14 @@ function IntroText() {
     return (
         <h1 className="text-center text-3xl font-semibold foldable:text-3xl tablet:text-end tablet:text-4xl [&>p]:leading-snug">
             <p className="text-text">
-                <span className="inline-block font-bold">
-                    데이터 흐름과 사용자 경험을 고려해
-                </span>
                 <span className="inline-block">
-                    <span className="font-bold">&nbsp;React 기반 웹서비스를 구현하는</span>
+                    단순히 화면을 만드는 것을 넘어
+                </span>
+            </p>
+
+            <p>
+                <span className="inline-block font-bold">
+                    데이터 흐름과 사용자 경험을 함께 고려하는
                 </span>
             </p>
             <p>
