@@ -15,11 +15,12 @@ export const modalData = [
         summary: '',
         description: [
             `키워드 기반으로 유튜브 채널을 검색하고, 구독자 수와 영상의 평균 조회수를 쉽게 확인할 수 있는 서비스입니다.`,
-            ` YouTube Data API를 활용해 채널명 검색과 영상 제목 검색을 병렬로 처리하는 하이브리드 검색 구조를 설계했고, API 호출 횟수를 줄이기 위한 배치 요청·캐싱 최적화를 진행했습니다.`,
+            `YouTube Data API를 활용해 채널명 검색과 영상 제목 검색을 병렬로 처리하는 하이브리드 검색 구조를 설계했고, API 호출 횟수를 줄이기 위한 배치 요청·캐싱 최적화를 진행했습니다.`,
         ],
         features: [
             '키워드 기반 유튜브 채널 검색',
-            '채널 상세 정보 조회'
+            '채널 상세 정보 조회',
+            '컨택 상태(미컨택/컨택/지원) 관리 및 개인 인플루언서 리스트 CRUD',
         ],
         techStack: [
             'Next.js','TypeScript','Tailwind CSS','YouTube Data API'],
@@ -56,7 +57,16 @@ export const modalData = [
                     '채널 ID 단위 Map 캐시를 추가해 페이지네이션 시 중복 채널 재조회 방지',
                 ],
             },
+            {
+                title: '컨택 관리 마이페이지 구현 (CRM형 데이터 관리 UI)',
+                description: [
+                    'Supabase(PostgreSQL) 기반으로 저장한 인플루언서 정보의 조회/등록 CRUD 구현',
+                    '컨택 상태(미컨택/컨택/지원) 탭 필터, 구독자순/조회수순 정렬, 이름 검색을 조합한 다중 조건 필터링 UI 설계',
+                    'useMemo를 활용해 필터링 무관한 state 변경 시 불필요한 재계산 방지',
+                ],
+            },
         ],
+
         troubleShooting: [
             {
                 title: '채널 상세 정보를 채널마다 개별 호출하며 API 요청이 과도하게 발생하던 문제',
@@ -87,6 +97,7 @@ export const modalData = [
                 ],
             },
         ],
+
         links: [
             {
                 label: 'GitHub',
@@ -194,12 +205,12 @@ export const modalData = [
                 ],
             },
             {
-                title: '실험 중 채팅 기능 구현',
+                title: 'WebSocket 기반 AI 음성 채팅 인터랙션 구현',
                 description: [
-                    'WebSocket 기반 텍스트 채팅 기능 구현',
-                    '음성 채팅 API 연동을 통해 실험 참여자 간 실시간 소통 지원',
-                    '채팅 로그 저장 및 조회 기능을 추가하여 실험 기록 관리 가능',
-                    '타이핑 기능 구현을 통해 실시간으로 채팅하는 듯한 UX 제공',
+                    '음성 입력(STT) → 서버 질의 → 텍스트·TTS 응답까지의 흐름을 WebSocket 기반 실시간 인터랙션으로 구현',
+                    '마이크 on/off 상태와 음성 스트림 흐름을 반영한 채팅 UI 설계',
+                    'STT/TTS API 연동 과정에서 요청·응답 구조를 개선하며 음성 응답 처리 로직 고도화',
+                    '채팅 로그 저장 및 조회 기능을 추가하여 실험 기록 관리 지원',
                 ],
             },
             {
@@ -220,6 +231,13 @@ export const modalData = [
             },
         ],
         troubleShooting: [
+            {
+                title: '텍스트 응답과 음성 응답의 타이밍이 어긋나던 문제',
+                description: [
+                    '[문제] 채팅 UI에서 텍스트 응답이 먼저 렌더링되고 음성 응답이 약 2초 늦게 도착해, 텍스트와 음성이 따로 노는 것처럼 느껴짐',
+                    '[해결] 타이핑 애니메이션 UI와 비동기(async) 처리를 결합해 텍스트 출력 속도를 음성 응답 도착 시점에 맞춰 동기화',
+                ],
+            },
             {
                 title: '프론트와 백엔드 API 연동 시 설계 문제',
                 description: [
