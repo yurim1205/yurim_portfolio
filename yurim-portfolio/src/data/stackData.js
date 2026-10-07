@@ -15,7 +15,7 @@ import MysqlIcon from "../assets/stackIcon/mysql.svg";
 import SupabaseIcon from "../assets/stackIcon/Supabase.svg";
 import NextJsIcon from "../assets/stackIcon/Nextjs.svg";
 import ZustandIcon from "../assets/stackIcon/zustand.svg";
-import ReactQueryIcon from "../assets/stackIcon/ReactQuery.svg";
+import ReactQueryIcon from "../assets/stackIcon/reactQuery.svg";
 import CursorAiIcon from "../assets/stackIcon/CursorAi.svg";
 
 export const FrontendIcons = [
