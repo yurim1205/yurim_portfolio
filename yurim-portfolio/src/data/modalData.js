@@ -115,7 +115,7 @@ export const modalData = [
         techStack: [
             'Next.js',
             'TypeScript',
-            'Justand',
+            'Zustand',
             'Tailwind CSS',
             'Supabase',
             'React Query',  
@@ -186,7 +186,7 @@ export const modalData = [
             '실시간 채팅을 통한 실험 로그 저장',
             '채팅 로그 기반 실험 레포트 생성',
         ],
-        techStack: ['React', 'JavaScript', 'Justand', 'Tailwind CSS', 'MySQL'],
+        techStack: ['React', 'JavaScript', 'Zustand', 'Tailwind CSS', 'MySQL'],
         contributions: [
             {
                 title: '로그인, 회원가입 기능 구현',
