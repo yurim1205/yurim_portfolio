@@ -14,7 +14,7 @@ import FastapiIcon from "../assets/stackIcon/Fastapi.svg";
 import MysqlIcon from "../assets/stackIcon/mysql.svg";
 import SupabaseIcon from "../assets/stackIcon/Supabase.svg";
 import NextJsIcon from "../assets/stackIcon/Nextjs.svg";
-import ZustandIcon from "../assets/stackIcon/Zustand.svg";
+import ZustandIcon from "../assets/stackIcon/zustand.svg";
 import ReactQueryIcon from "../assets/stackIcon/ReactQuery.svg";
 import CursorAiIcon from "../assets/stackIcon/CursorAi.svg";
 
