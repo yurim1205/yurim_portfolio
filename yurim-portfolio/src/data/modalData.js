@@ -10,7 +10,7 @@ export const modalData = [
     {
         id: 1,
         title: '[Influencer Finder]',
-        period: '2026.1 ~ 진행 중',
+        period: '2026.2 ~ 진행 중',
         teamInfo: '개인 프로젝트',
         summary: '',
         description: [
@@ -177,7 +177,7 @@ export const modalData = [
         id: 3,
         title: '[랩 가드]',
         period: '2025.5 ~ 2025.7',
-        teamInfo: '팀 프로젝트 (기획자 1명, 프론트엔드 1명, 백엔드 3명)',
+        teamInfo: '팀 프로젝트 (프론트엔드 1명, 백엔드 3명)',
         summary: 'Ai 기반 실험실 안전 보조 서비스',
         description: `화학 분야쪽 신입 사원을 대상으로 기획한 서비스입니다. (배포는 현재 내려간 상태입니다.)`,
         features: [
@@ -318,7 +318,7 @@ export const modalData = [
     {
         id: 5,
         title: '[트립 텔러]',
-        period: '2024.4 ~ 2024.6',
+        period: '2024.04.01~04.19',
         teamInfo: '팀 프로젝트 (프론트엔드 4명, 백엔드 2명)',
         summary:
             '여행 일정을 계획하고, 다른 사용자들과 여행 로그를 공유하는 서비스',
