@@ -9,13 +9,13 @@ import VsCodeIcon from "../assets/stackIcon/VSCode.svg";
 import PostmanIcon from "../assets/stackIcon/Postman.svg";
 import FigmaIcon from "../assets/stackIcon/Figma.svg";
 import GitIcon from "../assets/stackIcon/Git.svg";
-import TailwindIcon from "../assets/stackIcon/tailwind-css.png";
+import TailwindIcon from "../assets/stackIcon/TailwindCSS.svg";
 import FastapiIcon from "../assets/stackIcon/Fastapi.svg";
-import MysqlIcon from "../assets/stackIcon/mysql.svg";
+import MysqlIcon from "../assets/stackIcon/Mysql.svg";
 import SupabaseIcon from "../assets/stackIcon/Supabase.svg";
 import NextJsIcon from "../assets/stackIcon/Nextjs.svg";
-import ZustandIcon from "../assets/stackIcon/zustand.svg";
-import ReactQueryIcon from "../assets/stackIcon/reactQuery.svg";
+import ZustandIcon from "../assets/stackIcon/Zustand.svg";
+import ReactQueryIcon from "../assets/stackIcon/ReactQuery.svg";
 import CursorAiIcon from "../assets/stackIcon/CursorAi.svg";
 
 export const FrontendIcons = [
