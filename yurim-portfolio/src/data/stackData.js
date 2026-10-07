@@ -9,7 +9,7 @@ import VsCodeIcon from "../assets/stackIcon/VSCode.svg";
 import PostmanIcon from "../assets/stackIcon/Postman.svg";
 import FigmaIcon from "../assets/stackIcon/Figma.svg";
 import GitIcon from "../assets/stackIcon/Git.svg";
-import TailwindIcon from "../assets/stackIcon/TailwindCSS.svg";
+import TailwindIcon from "../assets/stackIcon/TailwindCSS.png";
 import FastapiIcon from "../assets/stackIcon/Fastapi.svg";
 import MysqlIcon from "../assets/stackIcon/Mysql.svg";
 import SupabaseIcon from "../assets/stackIcon/Supabase.svg";
