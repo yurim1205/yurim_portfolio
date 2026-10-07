@@ -10,7 +10,7 @@ export const modalData = [
     {
         id: 1,
         title: '[Influencer Finder]',
-        period: '2026.1 ~ 진행 중',
+        period: '2026.2 ~ 진행 중',
         teamInfo: '개인 프로젝트',
         summary: '',
         description: [
@@ -35,18 +35,12 @@ export const modalData = [
                 ],
             },
             {
-                title: '채널 상세 페이지 구현',
-                description: [
-                    'Next.js 동적 라우팅을 활용해 채널별 상세 페이지 구현',
-                    '채널 썸네일, 구독자 수, 평균 조회수, 채널 설명 등 주요 정보 렌더링',
-                ],
-            },
-            {
-                title: '검색 UX 개선',
+                title: '검색 결과 UX 개선',
                 description: [
                     '추천 키워드 버튼으로 빠른 검색 진입 제공',
                     'react-hot-toast를 활용한 빈 검색어 입력 시 에러 피드백 처리',
                     '검색 중 로딩 상태와 결과 없음 상태 분리 처리',
+                    'Next.js 동적 라우팅을 활용해 채널별 상세 페이지 구현 및 핵심 정보 렌더링',
                 ],
             },
             {
@@ -121,7 +115,7 @@ export const modalData = [
         techStack: [
             'Next.js',
             'TypeScript',
-            'Justand',
+            'Zustand',
             'Tailwind CSS',
             'Supabase',
             'React Query',  
@@ -183,7 +177,7 @@ export const modalData = [
         id: 3,
         title: '[랩 가드]',
         period: '2025.5 ~ 2025.7',
-        teamInfo: '팀 프로젝트 (기획자 1명, 프론트엔드 1명, 백엔드 3명)',
+        teamInfo: '팀 프로젝트 (프론트엔드 1명, 백엔드 3명)',
         summary: 'Ai 기반 실험실 안전 보조 서비스',
         description: `화학 분야쪽 신입 사원을 대상으로 기획한 서비스입니다. (배포는 현재 내려간 상태입니다.)`,
         features: [
@@ -192,7 +186,7 @@ export const modalData = [
             '실시간 채팅을 통한 실험 로그 저장',
             '채팅 로그 기반 실험 레포트 생성',
         ],
-        techStack: ['React', 'JavaScript', 'Justand', 'Tailwind CSS', 'MySQL'],
+        techStack: ['React', 'JavaScript', 'Zustand', 'Tailwind CSS', 'MySQL'],
         contributions: [
             {
                 title: '로그인, 회원가입 기능 구현',
@@ -264,7 +258,7 @@ export const modalData = [
         summary: '개인 포트폴리오 사이트',
         description: `노션이나 pdf 형태로 포트폴리오를 제작할 수도 있지만, 프론트엔드 개발자로서 직접 만든 포트폴리오 사이트를 가지고 싶어 제작하게 됐습니다.
          저를 잘 나타낼 수 있는 UI를 직접 설계했으며, UX를 고려하여 디자인했습니다.
-        현재도 계속 고도화 진행 중입니다.`,
+        현재도 계속 업데이트 진행 중입니다.`,
         features: [
             '자기소개 및 인적사항',
             '기술 스택',
@@ -324,7 +318,7 @@ export const modalData = [
     {
         id: 5,
         title: '[트립 텔러]',
-        period: '2024.4 ~ 2024.6',
+        period: '2024.04.01~04.19',
         teamInfo: '팀 프로젝트 (프론트엔드 4명, 백엔드 2명)',
         summary:
             '여행 일정을 계획하고, 다른 사용자들과 여행 로그를 공유하는 서비스',
