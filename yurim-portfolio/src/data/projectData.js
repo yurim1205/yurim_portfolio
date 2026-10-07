@@ -7,7 +7,7 @@ import css from '../assets/stackIcon/CSS.svg';
 import HTML from '../assets/stackIcon/HTML.svg';
 import JS from '../assets/stackIcon/JavaScript.svg';
 import React from '../assets/stackIcon/React.svg';
-import Tailwind from '../assets/stackIcon/tailwind-css.png';
+import Tailwind from '../assets/stackIcon/TailwindCSS.png';
 import Vite from '../assets/stackIcon/Vite-Dark.svg';
 import StyledComponents from '../assets/stackIcon/StyledComponents.svg';
 import TS from '../assets/stackIcon/TypeScript.svg';
