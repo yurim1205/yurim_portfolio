@@ -16,7 +16,7 @@ export default function Modal({ children, onClose }) {
       onClick={onClose} // 배경 클릭 시 모달 닫기
     >
       <div
-        className="bg-white p-6 relative max-w-6xl w-[2400px] h-[800px] mt-8 overflow-y-auto"
+        className="bg-white p-4 sm:p-6 relative w-[calc(100%-2rem)] max-w-6xl h-[85vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()} // 내부 클릭 시 닫히지 않도록
       >
         <button

@@ -5,8 +5,8 @@ import AboutSection from './pages/about/about';
 import StackSection from './pages/stack/stackList';
 import ProjectSection from './pages/project/project';
 import IntroSection from './pages/intro/intro';
-import ContactSection from './pages/contact/contact';
 import TopButton from './components/buttons/topButton';
+import Footer from './components/common/footer';
 
 // 모든 section태그에 대한 관찰 로직이 있고, 
 // activeSection를 Header 컴포넌트에 전달해서 ui 업데이트 !
@@ -77,13 +77,10 @@ const App = () => {
         <section id="project">
           <ProjectSection />
         </section>
-
-        <section id="contact">
-          <ContactSection />
-        </section>
       </main>
 
       <TopButton showButton={showButton} />
+      <Footer />
     </>
   );
 };
