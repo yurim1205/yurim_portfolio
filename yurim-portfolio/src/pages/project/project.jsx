@@ -45,13 +45,14 @@ const ProjectSection = () => {
                     PROJECT
                 </p>
 
-                <div className="mt-4 w-[1200px] h-[2px] bg-text"></div>
+                <div className="mt-4 w-[90%] max-w-[1200px] h-[2px] bg-text"></div>
 
                 <div className="relative w-full flex items-center justify-center mt-8">
                     {/* 왼쪽 화살표 */}
                     <button
                         onClick={handlePrev}
-                        className="mr-36 text-4xl text-[#FFEDD2] z-10 transition-transform duration-300 transform hover:scale-125 hover:text-[#68835E]"
+                        className="mr-2 sm:mr-8 lg:mr-36 text-4xl text-[#FFEDD2] z-10 transition-transform duration-300 transform
+                         hover:scale-125 hover:text-[#68835E]"
                     >
                         ❮
                     </button>
@@ -75,7 +76,7 @@ const ProjectSection = () => {
                                 <h2 className="text-xl font-bold mb-4 text-center">
                                     {selectedProjectDetail.title}
                                 </h2>
-                                <div className="flex items-center justify-center mt-4 space-x-4 mb-4">
+                                <div className="flex flex-wrap items-center justify-center mt-4 gap-y-2 space-x-4 mb-4">
                                     <p className="text-center">
                                         {selectedProjectDetail.period}
                                     </p>
@@ -88,11 +89,11 @@ const ProjectSection = () => {
                                     <img
                                         src={selectedProjectDetail.image}
                                         alt={selectedProjectDetail.title}
-                                        className="rounded-lg w-[700px] h-[400px] mx-auto"
+                                        className="rounded-lg w-full max-w-[700px] aspect-[7/4] object-cover mx-auto"
                                     />
                                 )}
                                 <div className="flex flex-col items-center mt-8">
-                                    <p className="mb-4 text-center w-[700px] whitespace-pre-line">
+                                    <p className="mb-4 text-center w-full max-w-[700px] whitespace-pre-line">
                                         {selectedProjectDetail.description}
                                     </p>
                                     <div className="flex flex-wrap gap-2 mb-4">
@@ -130,9 +131,9 @@ const ProjectSection = () => {
                                             )
                                         )}
                                     </div>
-                                    <div className="w-[700px] h-px bg-gray-300 my-4"></div>
+                                    <div className="w-full max-w-[700px] h-px bg-gray-300 my-4"></div>
 
-                                    <div className="flex flex-col w-[700px] mx-auto mt-4">
+                                    <div className="flex flex-col w-full max-w-[700px] mx-auto mt-4">
                                         {selectedProjectDetail.url && (
                                             <div className="space-y-2 mb-4">
                                                 <p className="mb-2 font-semibold text-xl">
@@ -241,7 +242,8 @@ const ProjectSection = () => {
                     {/* 오른쪽 화살표 */}
                     <button
                         onClick={handleNext}
-                        className="ml-36 text-4xl text-[#FFEDD2] z-10 transition-transform duration-300 transform hover:scale-125 hover:text-[#68835E]"
+                        className="ml-2 sm:ml-8 lg:ml-36 text-4xl text-[#FFEDD2] z-10 transition-transform duration-300 
+                        transform hover:scale-125 hover:text-[#68835E]"
                     >
                         ❯
                     </button>
