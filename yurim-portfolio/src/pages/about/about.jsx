@@ -31,7 +31,13 @@ const AboutSection = () => {
       label: "CONTACT",
       icon: <Mail strokeWidth={0.5} />, 
       title: "eoulim3237@naver.com", 
-      description: "GitHub · Velog" 
+      description: (
+        <>
+          <a href="https://github.com/yurim1205" target="_blank" rel="noopener noreferrer" className="hover:text-main underline-offset-4 hover:underline">GitHub</a>
+          {" · "}
+          <a href="https://velog.io/@yurimi" target="_blank" rel="noopener noreferrer" className="hover:text-main underline-offset-4 hover:underline">Velog</a>
+        </>
+      )
     },
   ];
 
