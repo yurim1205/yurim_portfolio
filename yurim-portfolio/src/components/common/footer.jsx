@@ -5,8 +5,7 @@ const Footer = () => (
         <div className="w-[90%] max-w-[1200px] h-[2px] bg-text mx-auto" />
 
         <div className="w-[90%] max-w-[1200px] mx-auto pt-6 flex flex-col
-         sm:flex-row items-center justify-between gap-4 text-sm sm:text-xl
-         font-thin">
+         sm:flex-row items-center justify-between gap-4 text-sm sm:text-base font-light">
             <p>© 2026 이유림. All rights reserved.</p>
 
             <div className="flex items-center gap-8 sm:gap-10">
