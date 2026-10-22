@@ -214,19 +214,18 @@ const ProjectSection = () => {
                                                         </div>
                                                         <div>
                                                             <ul className="text-gray-600 text-medium mt-1 list-disc pl-5">
-                                                                {trouble.description.map(
-                                                                    ( desc, i) => (
-                                                                    <li key={i}>
-                                                                        <span className="font-bold">
-                                                                            {desc.startsWith('[문제]') ? '[문제]: ' : desc.startsWith('[해결]') ? '[해결]: ' : ''}
-                                                                        </span>
-                                                                            {desc.replace(
-                                                                                /\[문제\]|\[해결\]/g,
-                                                                                ''
-                                                                            )}
+                                                                {trouble.description.map((desc, i) => {
+                                                                    const match = desc.match(/^\[(문제|해결|결과)\]:?\s*/);
+                                                                    const label = match ? `[${match[1]}]: ` : '';
+                                                                    const text = match ? desc.slice(match[0].length) : desc;
+
+                                                                    return (
+                                                                        <li key={i}>
+                                                                            <span className="font-bold">{label}</span>
+                                                                            {text}
                                                                         </li>
-                                                                    )
-                                                                )}
+                                                                    );
+                                                                })}
                                                             </ul>
                                                         </div>
                                                     </div>
