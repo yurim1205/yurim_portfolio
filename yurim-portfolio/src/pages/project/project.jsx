@@ -198,40 +198,38 @@ const ProjectSection = () => {
                                             )}
                                         </div>
 
-                                        <p className="mb-2 font-semibold text-xl">
-                                            트러블 슈팅
-                                        </p>
-                                        <div className="space-y-8 mb-4">
-                                            {selectedProjectDetail.troubleShooting.map(
-                                                (trouble, i) => (
+                                        {selectedProjectDetail.troubleShooting?.length > 0 && (
+                                            <>
+                                             <p className="mb-2 font-semibold text-xl">
+                                                트러블 슈팅
+                                            </p>
+                                                              <div className="space-y-8 mb-4">
+                                                {selectedProjectDetail.troubleShooting.map((trouble, i) => (
                                                     <div key={i}>
-                                                        <div
-                                                            className="bg-gray-100 px-4 py-2 mb-4 rounded-md font-semibold text-gray-800 font-medium"
-                                                        >
-                                                            <p>
-                                                                {trouble.title}
-                                                            </p>
+                                                        <div className="bg-gray-100 px-4 py-2 mb-4 rounded-md font-semibold text-gray-800 font-medium">
+                                                            <p> {trouble.title} </p>
                                                         </div>
-                                                        <div>
-                                                            <ul className="text-gray-600 text-medium mt-1 list-disc pl-5">
-                                                                {trouble.description.map((desc, i) => {
-                                                                    const match = desc.match(/^\[(문제|해결|결과)\]:?\s*/);
-                                                                    const label = match ? `[${match[1]}]: ` : '';
-                                                                    const text = match ? desc.slice(match[0].length) : desc;
+                                                            <div>
+                                                        <ul className="text-gray-600 text-medium mt-1 list-disc pl-5">
+                                                             {trouble.description.map((desc, i) => {
+                                                                 const match = desc.match(/^\[(문제|해결|결과)\]:?\s*/);
+                                                                 const label = match ? `[${match[1]}]: ` : '';
+                                                                 const text = match ? desc.slice(match[0].length) : desc;
 
-                                                                    return (
-                                                                        <li key={i}>
-                                                                            <span className="font-bold">{label}</span>
-                                                                            {text}
-                                                                        </li>
-                                                                    );
-                                                                })}
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                )
-                                            )}
-                                        </div>
+                                                                return (
+                                                                    <li key={i}>
+                                                                         <span className="font-bold">{label}</span>
+                                                                        {text}
+                                                                    </li>
+                                                                );
+                                                             })}
+                                                        </ul>
+                                                     </div>
+                                                 </div>
+                                                ))}
+                                            </div>
+                                        </>
+                                        )}
                                     </div>
                                 </div>
                             </ProjectDetailModal>
