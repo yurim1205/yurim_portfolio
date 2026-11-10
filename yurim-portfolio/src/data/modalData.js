@@ -10,20 +10,20 @@ export const modalData = [
     {
         id: 1,
         title: '[Influencer Finder]',
-        period: '2026.2 ~ 진행 중',
+        period: '2026.2 ~ 리팩토링 진행 중',
         teamInfo: '개인 프로젝트',
         summary: '',
         description: [ `마케터가 키워드로 유튜브 채널을 검색해 구독자 수와 영상 평균 조회수를 비교하고, 마음에 드는 채널을 저장해 컨택 진행 상황까지 관리할 수 있는 인플루언서 탐색·아카이빙 서비스입니다.
-YouTube Data API로 채널명 검색과 영상 제목 검색을 병렬 처리하는 하이브리드 검색 구조를 설계했고, 배치 요청과 캐싱으로 API 호출 횟수를 줄였습니다.`,
+YouTube Data API로 채널명 검색과 영상 제목 검색을 병렬 처리하는 하이브리드 검색 구조를 설계했고, 배치 요청과 캐싱으로 API 호출 횟수를 줄였습니다.
+(테스트 계정은 GitHub README에서 확인할 수 있습니다.)`,
         ],
         features: [
             '키워드 기반 유튜브 채널 검색',
-            '채널 상세 정보 조회',
-            '회원가입 및 로그인',
+            '채널 상세 정보 및 최근 영상 조회수 차트',
             '컨택 상태(미컨택/컨택/지원) 관리 및 개인 인플루언서 리스트 CRUD',
         ],
         techStack: [
-            'Next.js','TypeScript','Tailwind CSS','Supabase', 'YouTube Data API'],
+            'Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'YouTube Data API', 'Recharts', 'React Hook Form', 'Zod'],
         contributions: [
             {
                 title: '사용자 인터뷰 기반 UX 개선',
@@ -59,16 +59,26 @@ YouTube Data API로 채널명 검색과 영상 제목 검색을 병렬 처리하
                 ],
             },
             {
-                title: '회원 인증 구현',
+                title: '채널 성과 시각화',
                 description: [
-                    'Supabase Auth 기반 회원가입 및 로그인 구현',
-                    'RLS 정책을 적용해 사용자가 본인의 데이터만 조회·수정할 수 있도록 설정',
+                    'Recharts로 최근 영상 10개의 조회수 막대 차트와 평균 조회수 기준선 구현',
+                    '평균 조회수 계산 기준과 차트 데이터를 최근 영상 10개로 통일해 지표 일관성 확보',
+                    '숫자 표기를 소수점 한 자리(1.5만 등)까지 표시하도록 개선해 반올림 오차 해소',
+                ],
+            },
+            {
+                title: '서버 측 로그인 접근 제어',
+                description: [
+                    '@supabase/ssr로 세션을 쿠키 기반으로 전환해 서버에서도 로그인 상태를 확인할 수 있도록 구성',
+                    'Next.js proxy에서 렌더링 전 로그인 여부를 확인해 비로그인 사용자의 마이페이지 접근 차단',
+                    '로그인 후 원래 가려던 페이지로 돌아가도록 redirect 파라미터 처리',
                 ],
             },
             {
                 title: '컨택 관리 마이페이지 구현 (CRM형 데이터 관리 UI)',
                 description: [
                     'Supabase(PostgreSQL) 기반으로 저장한 인플루언서 정보의 조회/등록 CRUD 구현',
+                    'RLS 정책을 적용해 사용자가 본인의 데이터만 조회·수정할 수 있도록 설정',
                     '컨택 상태(미컨택/컨택/지원) 탭 필터, 구독자순/조회수순 정렬, 이름 검색을 조합한 다중 조건 필터링 UI 설계',
                     'useMemo를 활용해 필터링 무관한 state 변경 시 불필요한 재계산 방지',
                 ],
@@ -85,19 +95,19 @@ YouTube Data API로 채널명 검색과 영상 제목 검색을 병렬 처리하
                 ],
             },
             {
+                title: '서버에서 로그인 여부를 확인할 수 없던 문제',
+                description: [
+                    '[문제] 세션이 브라우저 localStorage에만 저장되어, 렌더링 전 서버(proxy)에서 로그인 여부를 확인할 수 없고 마이페이지 진입 시 빈 화면이 잠깐 노출됨',
+                    '[해결] @supabase/ssr로 세션을 쿠키에 저장하도록 전환하고, proxy에서 getUser()로 로그인 여부를 확인해 리다이렉트',
+                    '[결과] 렌더링 전에 접근을 제어해 빈 화면 깜빡임 제거',
+                ],
+            },
+            {
                 title: '더보기 클릭 시 새 데이터가 없는데도 버튼이 계속 노출되던 문제',
                 description: [
                     '[문제] YouTube API의 nextPageToken이 남아있어도 실제로는 중복된 채널만 반환되어, 더보기를 눌러도 목록이 늘어나지 않는 현상 발생',
                     '[해결] 응답 병합 후 실제로 새로 추가된 채널이 있는지 확인하는 로직을 추가해, 없으면 자동으로 다음 페이지를 재시도하고 최종적으로 종료 상태로 전환',
                     '[결과] 불러올 데이터가 없을 때 더보기 버튼이 정상적으로 사라져 의미 없는 클릭 방지',
-                ],
-            },
-            {
-                title: 'YouTube API 키 제한으로 서버 컴포넌트에서 API 호출이 막히는 문제',
-                description: [
-                    '[문제] 서버 컴포넌트는 referer가 비어있어 API 키의 HTTP 리퍼러 제한에 의해 요청이 차단됨',
-                    '[해결] 상세 페이지를 클라이언트 컴포넌트로 변경',
-                    '[결과] API 키 보안 제한을 유지하면서 채널 상세 정보 정상 조회',
                 ],
             },
             {
@@ -117,6 +127,7 @@ YouTube Data API로 채널명 검색과 영상 제목 검색을 병렬 처리하
                 icon: Github,
             },
         ],
+        url: 'https://influencer-finder-eight.vercel.app',
         image: influencerFinderImg,
     },
     {
