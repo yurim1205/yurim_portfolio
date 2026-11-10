@@ -20,9 +20,9 @@ export const projectData = [
         semiTitle: '개인 프로젝트',
         image: projectImg5,
         imageWebp: projectImg5,
-        description: `마케터를 위한 인플루언서 리스트업 서비스`,
+        description: `마케터를 위한 인플루언서 아카이빙 서비스`,
         techStack: [css, HTML, JS, React, Tailwind, Vite],
-        date: '2026.1 ~ 진행 중',
+        date: '2026.1 ~ 리팩토링 진행 중',
         url: 'https://yurim-portfolio-one.vercel.app/',
         projectGithub: 'https://github.com/yurim1205/yurim_portfolio',
         velogUrl:
